@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diploma</title>
+  <!--<link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="canvas">
+  <div class="search">
+
+    <header class="header">
+      <h2 class="header__title">NewsExplorer</h2>
+        <!--<nav class="header__buttons">-->
+          <ul class="header__buttons">
+            <li><a class="header__button" href="index.html">Главная<img class=button src="<%=require('../src/images/Union.svg').default%>" alt="button"></a></li>
+            <li><a class="header__button" href="index2.html">Сохранённые статьи</a></li>
+            <li><a class="header__button header__button_login-button" href="index2.html">Авторизоваться</a></li>
+            <li><a class="header__button header__button_loggedin-button" href="#!">Имя+картинка</a></li>
+          </ul>
+        <!--</nav>-->
+    </header>
+
+    <h1 class="search__title">Что творится в мире?</h1>
+      <h2 class="search__text">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
+        <div class="search__field">Сохранённые статьи
+        </div>
+  </div>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</body>
+
+</html>

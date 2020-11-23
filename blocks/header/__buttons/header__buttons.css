@@ -1,0 +1,12 @@
+.header__buttons {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    list-style: none;
+    overflow-wrap: normal;
+    display: flex;
+    margin-left: auto;
+    margin-right: 104px;
+}

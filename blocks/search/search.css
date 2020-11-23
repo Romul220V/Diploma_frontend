@@ -1,0 +1,11 @@
+@import url(./_title/search_title.css);
+@import url(./_text/search_text.css);
+@import url(./_field/search_field.css);
+
+.search {
+   /* display: flex;*/
+    background-image: url(../../src/images/search-image.jpg);
+    height: 576px;
+    left: 0px;
+    top: 0px;
+}

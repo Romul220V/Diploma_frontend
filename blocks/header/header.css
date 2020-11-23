@@ -1,0 +1,14 @@
+@import url(./__buttons/header__buttons.css);
+@import url(./__buttons/header__button.css);
+@import url(./__buttons/header__button_login-button.css);
+@import url(./__buttons/header__button_loggedin-button.css);
+@import url(./__buttons/button.css);
+@import url(./__title/header__title.css);
+
+.header {
+  height: 80px;
+  width: 1440px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #C4C4C4;
+}
