@@ -1,0 +1,18 @@
+.popup__another-choice {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.popup__another-choice_link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2F71E5;
+    margin-left:5px;
+    cursor: pointer;
+}

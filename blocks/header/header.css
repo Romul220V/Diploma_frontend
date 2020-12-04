@@ -2,8 +2,7 @@
 @import url(./__buttons/header__button.css);
 @import url(./__buttons/header__button_login-button.css);
 @import url(./__buttons/header__button_loggedin-button.css);
-@import url(./__buttons/button.css);
-@import url(./__title/header__title.css);
+@import url(./__buttons/header__button_pic.css);
 
 .header {
   height: 80px;

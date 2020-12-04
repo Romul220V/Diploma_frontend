@@ -1,0 +1,19 @@
+@import url(./__image/search-card__image.css);
+@import url(./__bookmark-icon/search-card__bookmark-icon.css);
+@import url(./__delete-icon/search-card__delete-icon.css);
+@import url(./__warning/search-card__warning.css);
+@import url(./__tag/search-card__tag.css);
+@import url(./__date/search-card__date.css);
+@import url(./__description/search-card__description.css);
+@import url(./__sourse/search-card__sourse.css);
+
+.search-card {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+  }
+
+    

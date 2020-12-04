@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diploma</title>
+  <!--<link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+
+<body class="canvas">
+  <div class="search3">
+
+    <header class="header">
+      <h2 class="title title_header3">NewsExplorer</h2>
+      <!--<nav class="header__buttons">-->
+      <ul class="header__buttons">
+        <li><a class="header__button header__button3" href="index.html">Главная</a></li>
+        <li><a class="header__button3" href="index2.html">Сохранённые статьи</a></li>
+        <li><a class="header__button3 header__button_loggedin-button" href="#!">Имя<img class="header__button_pic"
+              src="<%=require('../images/Union_black.svg').default%>" alt="button"></a></li>
+      </ul>
+      <!--</nav>-->
+    </header>
+    <div class="saved-articles">
+      <h2 class="title title_saved-articles">Сохранённые статьи</h2>
+      <h3 class="text text_saved-articles">Грета, у вас 5 сохранённых статей</h3>
+      <h3 class="text text_saved-articles-tags">По ключевым словам: <b>Природа, Тайга</b> и <b>2-м другим</b></h3>
+    </div>
+
+    <div class="search-results-list search-results-list__2">
+      <div class="search-results-list__cards">
+        <template class ="base-template">
+        <div class="search-card">
+          <div class="search-card__image">
+            <div class="search-card__tag">
+              <span class="text text_warning">Tag</span>
+            </div>
+            <div class="search-card__warning">
+              <span class="text text_warning2">Убрать из сохранённых</span>
+            </div>
+            <button class="search-card__delete-icon"></button>
+          </div>
+          <div class="search-card__description">
+            <span class="search-card__date">Date</span>
+            <a>
+              <h3 class="title title_search-card">Title</h3>
+            </a>
+            <p class="text text_search-card">text</p>
+            <span class="search-card__sourse">соурс</span>
+          </div>
+        </div>
+        </template>
+      </div>
+
+      <footer class="footer">
+        <h2 class="title title_footer">© 2020 Supersite, Powered by News API</h2>
+        <ul class="footer__links">
+          <li><a class="footer__link" href="index.html">Главная</a></li>
+          <li><a class="footer__link" href="index2.html">Яндекс.Практикум</a></li>
+        </ul>
+        <ul class="footer__icons">
+          <li><a class="footer__icon" href="index.html">Гитхаб</a></li>
+          <li><a class="footer__icon" href="index2.html">Пейсбук</a></li>
+        </ul>
+      </footer>
+
+      <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+
+</html>

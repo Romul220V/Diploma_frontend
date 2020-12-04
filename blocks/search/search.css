@@ -1,11 +1,18 @@
-@import url(./_title/search_title.css);
-@import url(./_text/search_text.css);
-@import url(./_field/search_field.css);
-
+@import url(./__field/search__field.css);
+@import url(./__field-button/search__field-button.css);
+@import url(./__field-space/search__field-space.css);
 .search {
-   /* display: flex;*/
+    /* display: flex;*/
     background-image: url(../../src/images/search-image.jpg);
     height: 576px;
+    left: 0px;
+    top: 0px;
+}
+
+.search3 {
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+    height: 80px;
     left: 0px;
     top: 0px;
 }

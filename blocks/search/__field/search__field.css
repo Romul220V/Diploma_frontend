@@ -1,0 +1,17 @@
+@import url(../__field-button/search__field-button.css);
+@import url(../__field-space/search__field-space.css);
+
+.search__field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border: 1px solid #D1D2D6;
+    border-right-width: 0;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    border-radius: 100px;
+    width: 608px;
+    height: 64px;
+    margin: 0 416px 0;
+}

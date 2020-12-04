@@ -1,0 +1,10 @@
+@import url(../footer/__links/footer__links.css);
+@import url(../footer/__link/footer__link.css);
+@import url(../footer/__icons/footer__icons.css);
+@import url(../footer/__icon/footer__icon.css);
+.footer {
+    display: flex;
+    align-items: center;
+    width: 1440px;
+    Height: 80px;
+}

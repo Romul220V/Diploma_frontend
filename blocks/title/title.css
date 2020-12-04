@@ -1,0 +1,167 @@
+.title {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+}
+
+.title_header {
+  height: 24px;
+  width: 200px;
+  margin-left: 104px;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.title_header3 {
+  height: 24px;
+  width: 200px;
+  margin-left: 104px;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+.title_search {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 64px;
+  color: #FFFFFF;
+  width: 608px;
+  height: 128px;
+  margin: 80px 416px 0;
+}
+
+.title_aboutAuthor {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  padding-bottom: 24px;
+  margin: 0;
+}
+
+.title_search-results-list {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  width: 712px;
+  margin-left: 104px;
+  margin-top: 80px;
+}
+
+.title_search-card {
+  margin: 12px 24px 16px;
+  width: 352px;
+  max-height: 110px;
+  margin-left: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+}
+
+.title_footer {
+  font-family: 'Roboto';
+  width: 433px;
+  margin-left: 104px;
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+}
+
+.title_saved-articles {
+  margin-left: 104px;
+  margin-top: 40px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+.title_popup-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+
+
+
+
+.title_videoccccccccccccccccccccccccccccccccccccccccccccccccccccccccc {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 78px;
+  text-align: center;
+  width: 800px;
+  margin: 0px 192px 48px;
+}
+
+.title_additional {
+  width: 800px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 65px;
+  text-align: center;
+  margin: 0px auto 48px;
+}
+
+.title_comments {
+  width: 800px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 65px;
+  text-align: center;
+  margin: 0px 192px 48px;
+}
+
+.title_cover {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 78px;
+  position: relative;
+  text-align: center;
+  margin: 274px 50px 0 30px;
+  width: 1095px;
+  z-index: 2;
+  color: #FFFDFD;
+}
+
+.title_emblem {
+  width: 443px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 46px;
+  text-align: left;
+  margin-bottom: 82px;
+}
+
+.title_barentsburg {
+  width: 583px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 61px;
+  text-align: left;
+  margin-bottom: 20px;
+}

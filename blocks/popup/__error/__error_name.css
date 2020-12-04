@@ -1,0 +1,14 @@
+.error_mail {
+    display: none;
+    color: red;
+}
+
+.error_password {
+    display: none;
+    color: red;
+}
+
+.error_name {
+    display: none;
+    color: red;
+}

@@ -10,34 +10,81 @@
 </head>
 
 <body class="canvas">
-  <div class="search">
+  <div class="search2">
 
     <header class="header">
-      <h2 class="header__title">NewsExplorer</h2>
+      <h2 class="title title_header2">NewsExplorer</h2>
       <ul class="header__buttons">
-        <li><a class="header__button" href="index2.html">Главная</a></li>
-        <li><a class="header__button" href="index4">Сохранённые статьи</a></li>
-        <li><a class="header__button header__button_loggedin-button" href="index.html">Имя<img class="button"
-              src="<%=require('../src/images/Union.svg').default%>" alt="button"></a></li>
+        <li><a class="header__button" href="index.html">Главная</a></li>
+        <li><a class="header__button header__button_login-button" href="index3.html">Авторизоваться</a></li>
       </ul>
     </header>
 
-    <h1 class="search_title">Что творится в мире?</h1>
-    <h2 class="search_text">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
-    <div class="search_field">
-      <div class="search_field__space">Введите тему новости</div>
-      <div class="search_field__button" href="index3">Искать</div>
+
+    <div class="search-results-list">
+      <h2 class="title title_search-results-list">Результаты поиска</h2>
+    
+      <div class="search-results-list__cards">
+      <!-- <template class ="base-template"> -->
+        <div class="search-card">
+          <div class="search-card__image" >
+            <span class="search-card__warning">Войдите, чтобы сохранять статьи</span>
+            <button class="search-card__bookmark-icon"></button>
+          </div>
+          <div class="search-card__description">
+            <span class="search-card__date">Об авторе</span>
+            <a><h3 class="title title_search-card">Камчатка</h3></a>
+            <p class="text text_search-card">текст</p>
+            <span class="search-card__sourse">соурс</span>
+          </div>
+        </div>
+      <!-- </template> -->
     </div>
-  </div>
-  <div class="AboutAuthor">
-    <h2 class="AboutAuthor AboutAuthor_title">Об авторе</h2>
-    <p class="AboutAuthor AboutAuthor_text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
-      чем вы занимаетесь, какими технологиями разработки владеете. Также можно рассказать о процессе обучения в
-      Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
 
-  </div>
+
+
+
+
+
+
+    
+    <div class="saved-articles">
+      <h2 class="title title_saved-articles">Сохранённые статьи</h2>
+      <h3 class="text text_saved-articles">Грета, у вас 5 сохранённых статей</h3>
+      <h3 class="text text_saved-articles-tags">По ключевым словам: Природа, Тайга и 2-м другим</h3>
+    </div>
+
+    <div class="search-results-list">
+      <h2 class="title title_search-results-list">Результаты поиска</h2>
+    
+      <div class="search-results-list__cards">
+      <template class ="base-template">
+        <div class="search-card">
+          <div class="search-card__image">
+            <h3 class="search-card__tag">Tag</h3>
+            <h3 class="search-card__warning">Убрать из сохранённых</h3>
+            <button class="search-card__delete-icon"></button>
+          </div>
+          <div class="search-card__description">
+            <h2 class="search-card__date">Card Date</h2>
+            <h3 class="title title_search-card">Card Title</h3>
+            <h2 class="text text_search-card">Card Text</h2>
+            <h2 class="search-card__sourse">Card Sourse</h2>
+          </div>
+        </div>
+      </template>
+    </div>
+    
   <footer class="footer">
-
+    <h2 class="title title_footer">© 2020 Supersite, Powered by News API</h2>
+    <ul class="footer__links">
+      <li><a class="footer__link" href="index.html">Главная</a></li>
+      <li><a class="footer__link" href="index2.html">Яндекс.Практикум</a></li>
+    </ul>
+    <ul class="footer__icons">
+      <li><a class="footer__icon" href="index.html">Гитхаб</a></li>
+      <li><a class="footer__icon" href="index2.html">Пейсбук</a></li>
+    </ul>
   </footer>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </body>

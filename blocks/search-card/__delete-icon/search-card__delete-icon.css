@@ -1,0 +1,18 @@
+.search-card__delete-icon {
+    width: 40px;
+    height: 40px;
+    background: url(../../../src/images/trash-normal.svg) center no-repeat;
+    background-color: #FFFFFF;
+    border: none;
+    top: 18px;
+    left: 336px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.search-card__delete-icon:hover {
+    background: url(../../../src/images/trash-focused.svg) center no-repeat;
+    background-color: #FFFFFF;
+}

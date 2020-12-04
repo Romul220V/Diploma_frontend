@@ -1,0 +1,14 @@
+@import url(./__cards/search-results-list__cards.css);
+@import url(./__show-more/search-results-list__show-more.css);
+.search-results-list{
+    height: 974px;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background:#F5F6F7;;
+}
+
+.search-results-list__2 {
+    height: 1292px;
+}

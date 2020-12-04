@@ -1,0 +1,11 @@
+.search-card__image {
+    height: 272px;
+    background-size: 408px 282px;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}

@@ -1,0 +1,23 @@
+.search-card__bookmark-icon {
+    width: 40px;
+    height: 40px;
+    background: url(../../../src/images/bookmark-icon-normal.svg) center no-repeat;
+    background-color: #FFFFFF;
+    border: none;
+    top: 18px;
+    left: 336px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.search-card__bookmark-icon_marked {
+    background: url(../../../src/images/bookmark-icon-marked.svg) center no-repeat;
+    background-color: #FFFFFF;
+}
+
+.search-card__bookmark-icon:hover {
+    background: url(../../../src/images/bookmark-icon-hover.svg) center no-repeat;
+    background-color: #FFFFFF;
+}
