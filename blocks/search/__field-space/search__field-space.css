@@ -6,6 +6,6 @@
     line-height: 22px;
     /* color: #B6BCBF; */
     margin:  21px 24px;
-    width: 376px;
+    max-width: 376px;
     border: none;
 }

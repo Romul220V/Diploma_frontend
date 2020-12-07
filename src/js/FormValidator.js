@@ -6,9 +6,10 @@ export default class FormValidator {
         this.inputMail = formContainer.querySelectorAll('input')[0];
         this.inputPassword = formContainer.querySelectorAll('input')[1];
         this.inputName = formContainer.querySelectorAll('input')[2];
-        this.errorMail = formContainer.querySelectorAll('span')[0];
-        this.errorPassword = formContainer.querySelectorAll('span')[1];
-        this.errorName = formContainer.querySelectorAll('span')[2];
+        // this.errorMail = document.getElementById('1');
+        this.errorMail = formContainer.querySelectorAll('span')[1];
+        this.errorPassword = formContainer.querySelectorAll('span')[3];
+        this.errorName = formContainer.querySelectorAll('span')[5];
     };
 
     setDefaultValue() {

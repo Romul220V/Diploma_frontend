@@ -1,14 +1,17 @@
 .error_mail {
     display: none;
     color: red;
+    margin-bottom:24px
 }
 
 .error_password {
     display: none;
     color: red;
+    margin-bottom:24px
 }
 
 .error_name {
     display: none;
     color: red;
+    margin-bottom:24px
 }

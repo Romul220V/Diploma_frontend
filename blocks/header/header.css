@@ -1,13 +1,24 @@
 @import url(./__buttons/header__buttons.css);
-@import url(./__buttons/header__button.css);
-@import url(./__buttons/header__button_login-button.css);
-@import url(./__buttons/header__button_loggedin-button.css);
-@import url(./__buttons/header__button_pic.css);
-
+@import url(./__button/header__button.css);
+@import url(./__phone-button/header__phone-button.css);
 .header {
   height: 80px;
-  width: 1440px;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #C4C4C4;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .header {
+    height: 66px;
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    height: 56px;
+    max-width: 320px;
+  }
 }

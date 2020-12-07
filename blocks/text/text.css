@@ -1,19 +1,19 @@
+@import url('../text/_search/text_search.css');
+
+@import url('../title/_footer/title_footer.css');
+@import url('../title/_header/title_header.css');
+@import url('../title/_popup-title/title_popup-title.css');
+@import url('../title/_saved-articles/title_saved-articles.css');
+@import url('../title/_search/title_search.css');
+@import url('../title/_search-card/title_search-card.css');
+@import url('../title/_search-results-list/title_search-results-list.css');
+
 .text {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
   font-size: 72px;
   color: #1A1B22;
-}
-
-.text_search {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  color: #FFFFFF;
-  width: 545px;
-  height: 48px;
-  margin: 32px 416px 64px;
 }
 
 .text_aboutAuthor1 {
@@ -78,81 +78,4 @@
   font-size: 12px;
   line-height: 15px;
   color: #2F71E5;
-}
-
-
-
-
-
-
-.title_placessssssssssssssssssssssssssssssssssssssss {
-  width: 460px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 65px;
-  margin: 0 43px 0 0;
-}
-
-.title_video {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 78px;
-  text-align: center;
-  width: 800px;
-  margin: 0px 192px 48px;
-}
-
-.title_additional {
-  width: 800px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 65px;
-  text-align: center;
-  margin: 0px auto 48px;
-}
-
-.title_comments {
-  width: 800px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 65px;
-  text-align: center;
-  margin: 0px 192px 48px;
-}
-
-.title_cover {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 78px;
-  position: relative;
-  text-align: center;
-  margin: 274px 50px 0 30px;
-  width: 1095px;
-  z-index: 2;
-  color: #FFFDFD;
-}
-
-.title_emblem {
-  width: 443px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 42px;
-  line-height: 46px;
-  text-align: left;
-  margin-bottom: 82px;
-}
-
-.title_barentsburg {
-  width: 583px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 42px;
-  line-height: 61px;
-  text-align: left;
-  margin-bottom: 20px;
 }

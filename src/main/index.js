@@ -92,9 +92,19 @@ const popupRegDone = new Popup(regFormDone);
 
 const regDone = regForm.querySelector('.popup__button');
 
+const ApiUrl = process.env.NODE_ENV === "production" ? "https://nomoreparties.co/cohort12" : "http://nomoreparties.co/cohort12";
+const api = new API({
+    baseUrl: ApiUrl
+});
 regDone.onclick = () => {
-    popupRegistration.openClose();
-    popupRegDone.openClose();
+    const userData = {};
+    userData.mail = regDone.querySelectorAll('input')[0].value;
+    userData.password = regDone.querySelectorAll('input')[1].value;
+    userData.name = regDone.querySelectorAll('input')[2].value;
+    api.signUp(userData).then((res) => {
+        popupRegistration.openClose();
+        popupRegDone.openClose();
+    })
 };
 
 const loggedInButton = regFormDone.querySelector('.popup__another-choice_link');
@@ -103,9 +113,20 @@ loggedInButton.onclick = () => {
     popupRegDone.openClose();
     popupLogin.openClose();
 };
-// const tempSecondPage = popupLogin.querySelector('.popup__button');
+const tempSecondPage = login.querySelector('.popup__button');
 
-// tempSecondPage.onclick = () => {
-//     popupLogin.openClose();
-//    // document.location.href = '../sa/index3.html'
-// };
+tempSecondPage.onclick = () => {
+    popupLogin.openClose();
+    document.location.href = 'index3.html';
+};
+
+const searchFieldHeader = document.querySelector('.search');
+const searchFieldButton = searchFieldHeader.querySelector('.search__field-button');
+searchFieldButton.onclick = () => {
+    document.location.href = 'index.html';
+};
+const searchResultsList = document.querySelector('.search-results-list');
+const searchResultsMoreButton = searchResultsList.querySelector('.search-results-list__show-more');
+searchResultsMoreButton.onclick = () => {
+    document.location.href = 'index.html';
+};

@@ -1,0 +1,16 @@
+.header__button_loggedin-button {
+    padding: 12px !important;
+    border: 1px solid #1A1B22;
+    color: #1A1B22;
+    box-sizing: border-box;
+    border-radius: 100px;
+    display: flex !important;
+    align-content: center;
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .header__button_loggedin-button {
+        margin-right: 15px 8px;
+        padding: 8px 0;
+        margin: 14px 16px 12px 0;
+    }
+  }

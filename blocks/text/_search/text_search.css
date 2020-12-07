@@ -1,0 +1,27 @@
+.text_search {
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 24px;
+    color: #FFFFFF !important;
+    max-width: 545px;
+    height: 48px;
+    margin: 0 416px 0;
+    padding: 32px 0 64px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .text_search {
+        max-width: 452px;
+        margin: 0 160px 0;
+        padding: 16px 0 48px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .text_search {
+        max-width: 288px;
+        height: 72px;
+        margin: 0 16px 0;
+        padding: 16px 0 122px;
+    }
+}

@@ -8,7 +8,7 @@
 @import url(./__sourse/search-card__sourse.css);
 
 .search-card {
-    width: 400px;
+    max-width: 400px;
     background-color: #fff;
     border-radius: 10px;
     height: 576px;

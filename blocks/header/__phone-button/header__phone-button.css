@@ -1,0 +1,13 @@
+.header__phone-button {
+    height: 24px;
+    width:24px;
+    margin: 16px 0 16px 140px;
+    display: flex;
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 1440px) {
+    .header__phone-button {
+        display: none;
+    }
+}

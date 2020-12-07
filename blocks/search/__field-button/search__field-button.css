@@ -1,5 +1,5 @@
 .search__field-button {
-    width: 168px;
+    max-width: 168px;
     height: 64px;
     background: #2F71E5;
     box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);

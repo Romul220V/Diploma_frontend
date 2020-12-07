@@ -1,18 +1,24 @@
 @import url(./__field/search__field.css);
 @import url(./__field-button/search__field-button.css);
 @import url(./__field-space/search__field-space.css);
+@import url(./search_search3.css);
 .search {
-    /* display: flex;*/
     background-image: url(../../src/images/search-image.jpg);
     height: 576px;
     left: 0px;
     top: 0px;
 }
 
-.search3 {
-    background: #FFFFFF;
-    box-shadow: inset 0px -1px 0px #D1D2D6;
-    height: 80px;
-    left: 0px;
-    top: 0px;
-}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search {
+      height: 400px;
+      max-width: 768px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .search {
+      height: 536px;
+      max-width: 320px;
+    }
+  }

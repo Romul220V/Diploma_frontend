@@ -1,0 +1,27 @@
+.title_header {
+    height: 24px;
+    max-width: 200px;
+    margin: 0 0 0 104px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .title_header {
+        margin: 0 0 0 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title_header {
+        max-width: 117px;
+        font-size: 16px;
+        margin: 0 0 0 16px;
+    }
+}
+
+.title_header3 {
+    color: #1A1B22;
+}

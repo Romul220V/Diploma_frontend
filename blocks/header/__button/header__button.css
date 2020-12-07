@@ -1,0 +1,28 @@
+@import url(./_sa/header__button_sa.css);
+@import url(./_login-button/header__button_login-button.css);
+@import url(./_loggedin-button/header__button_loggedin-button.css);
+@import url(./_pic/header__button_pic.css);
+.header__button {
+    display: inline-block;
+    margin: 0;
+    overflow-wrap: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+    height: 48px;
+    padding: 12px 0;
+    box-sizing: border-box;
+    margin: 18px 33px 11px 0;
+    display: block;
+    cursor: pointer;
+}
+.header__button_sa {
+    color: #1A1B22;
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .header__button {
+        margin-right: 16px;
+        height: 40px;
+        padding: 8px 0;
+        margin: 14px 16px 12px 0;
+    }
+  }

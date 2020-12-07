@@ -11,7 +11,7 @@
     box-sizing: border-box;
     backdrop-filter: blur(8px);
     border-radius: 100px;
-    width: 608px;
+    max-width: 608px;
     height: 64px;
     margin: 0 416px 0;
 }
