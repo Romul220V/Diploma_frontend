@@ -16,3 +16,28 @@
     display: block;
     cursor: pointer;
 }
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search__field-button {
+        max-width: 160px;
+        height: 56px;
+        padding: 15px 50px 17px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search__field-button {
+        max-width: 288px;
+        height: 56px;
+        padding: 15px 114px 17px;
+        margin-top: 16px;
+    }
+}
+
+.search__field-button:hover {
+    background: #347EFF;
+}
+
+.search__field-button:active {
+    background: #2A65CC;
+}

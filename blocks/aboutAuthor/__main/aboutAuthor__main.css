@@ -1,6 +1,21 @@
-.aboutAuthor__main{
+.aboutAuthor__main {
     max-width: 600px;
     max-height: 214px;
-    margin-bottom: 279px;
-    margin-top: 131px;
+    margin: 51px 0 199px 56px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .aboutAuthor__main {
+        max-width: 424px;
+        max-height: 242px;
+        margin: 0 0 72px 32px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutAuthor__main {
+        max-width: 288px;
+        max-height: 344px;
+        margin: 24px auto 80px;
+    }
 }

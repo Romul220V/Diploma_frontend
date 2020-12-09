@@ -1,0 +1,24 @@
+.text_search-card {
+  margin: 16px 24px 0;
+  max-height: 110px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .text_search-card {
+    margin: 10px 16px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text_search-card {
+    margin: 10px 16px 0;
+  }
+}

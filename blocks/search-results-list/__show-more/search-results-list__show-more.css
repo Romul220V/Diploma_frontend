@@ -17,3 +17,25 @@
     display: block;
     cursor: pointer;
 }
+
+.search-results-list__show-more:hover {
+    opacity: 0.9;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search-results-list__show-more {
+        max-width: 240px;
+        height: 56px;
+        padding: 15px 60px 17px;
+        margin: 0 auto 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search-results-list__show-more {
+        max-width: 288px;
+        height: 56px;
+        padding: 15px 84px 17px;
+        margin: 0 auto 32px;
+    }
+}

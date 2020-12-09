@@ -1,11 +1,11 @@
 .footer__icon {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    text-decoration: none;
-    color: #1A1B22;
+    background: url(../../../src/images/github.svg) center no-repeat;
+    width: 20px;
+    height: 20px;
     margin-right: 28px;
+    display: block;
+}
+
+.footer__icon_2 {
+    background: url(../../../src/images/facebook.svg) center no-repeat;
 }

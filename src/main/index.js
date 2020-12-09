@@ -4,6 +4,7 @@ import Card from '../js/card';
 import FormValidator from '../js/FormValidator';
 import FormValidatorLogin from '../js/FormValidatorLogin';
 import Popup from '../js/Popup';
+import API from '../js/API';
 const initialCards = [
     {
         keyword: 'Природа',
@@ -92,17 +93,19 @@ const popupRegDone = new Popup(regFormDone);
 
 const regDone = regForm.querySelector('.popup__button');
 
-const ApiUrl = process.env.NODE_ENV === "production" ? "https://nomoreparties.co/cohort12" : "http://nomoreparties.co/cohort12";
+// const ApiUrl = process.env.NODE_ENV === "production" ? "https://romullearnin.ru.com/api/" : "http://localhost:3000/";
+const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api" : "http://localhost:3000/api";
 const api = new API({
     baseUrl: ApiUrl
 });
 regDone.onclick = () => {
     const userData = {};
-    userData.mail = regDone.querySelectorAll('input')[0].value;
-    userData.password = regDone.querySelectorAll('input')[1].value;
-    userData.name = regDone.querySelectorAll('input')[2].value;
+    userData.email = regForm.querySelectorAll('input')[0].value;
+    userData.password = regForm.querySelectorAll('input')[1].value;
+    userData.name = regForm.querySelectorAll('input')[2].value;
     api.signUp(userData).then((res) => {
         popupRegistration.openClose();
+        
         popupRegDone.openClose();
     })
 };

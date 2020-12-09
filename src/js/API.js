@@ -6,7 +6,8 @@ export default class API {
 
     signUp(userData) {
         return fetch(`${this.baseUrl}/signup`, {
-            method: 'POST', body: json.stringify(userData)
+            headers:{'Content-Type': 'application/json'},
+            method: 'POST', body: JSON.stringify(userData)
             
         })
         .then(res => {

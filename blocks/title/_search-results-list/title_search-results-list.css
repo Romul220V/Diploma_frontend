@@ -1,8 +1,28 @@
 .title_search-results-list {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 46px;
-    max-width: 712px;
-    margin-left: 104px;
-    margin-top: 80px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  max-width: 712px;
+  margin-left: 104px;
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .title_search-results-list {
+    max-width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+    margin-left: 40px;
+    margin-top: 40px;
   }
+}
+
+@media screen and (max-width: 320px) {
+  .title_search-results-list {
+    max-width: 288px;
+    font-size: 30px;
+    line-height: 34px;
+    margin-left: 16px;
+    margin-top: 32px;
+  }
+}

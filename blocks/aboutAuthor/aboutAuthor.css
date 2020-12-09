@@ -9,3 +9,17 @@
     align-items: center;
     background: #FFFFFF;
 }
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .aboutAuthor {
+        height: 354px;
+        max-width: 768px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .aboutAuthor {
+        height: 752px;
+        max-width: 320px;
+    }
+  }

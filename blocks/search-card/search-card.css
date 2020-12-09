@@ -1,3 +1,4 @@
+@import url(./__image-block/search-card__image-block.css);
 @import url(./__image/search-card__image.css);
 @import url(./__bookmark-icon/search-card__bookmark-icon.css);
 @import url(./__delete-icon/search-card__delete-icon.css);
@@ -16,4 +17,16 @@
     flex-direction: column;
   }
 
-    
+  @media screen and (min-width: 321px) and (max-width: 768px) {
+    .search-card {
+      max-width: 224px;
+      height: 420px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .search-card {
+      max-width: 288px;
+      height: 440px;
+    }
+  }

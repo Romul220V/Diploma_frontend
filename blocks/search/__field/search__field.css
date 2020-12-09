@@ -1,6 +1,5 @@
 @import url(../__field-button/search__field-button.css);
 @import url(../__field-space/search__field-space.css);
-
 .search__field {
     display: flex;
     align-items: center;
@@ -13,5 +12,22 @@
     border-radius: 100px;
     max-width: 608px;
     height: 64px;
-    margin: 0 416px 0;
+    margin: 0 416px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search__field {
+        max-width: 488px;
+        height: 56px;
+        margin: 0 auto 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search__field {
+        max-width: 288px;
+        height: 56px;
+        flex-direction: column;
+        margin: 0 auto 0;
+    }
 }

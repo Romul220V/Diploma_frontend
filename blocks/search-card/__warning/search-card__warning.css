@@ -9,5 +9,19 @@
     display: none;
     align-items: center;
     justify-content: center;
-    margin-right: 5px;
+    position: absolute;
+    right: 69px;
 }
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search-card__warning {
+        margin-top: 8px;
+        right: 53px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .search-card__warning {
+        margin-top: 16px;
+        right: 61px;
+    }
+  }

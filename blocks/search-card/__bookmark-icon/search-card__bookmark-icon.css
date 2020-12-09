@@ -4,12 +4,11 @@
     background: url(../../../src/images/bookmark-icon-normal.svg) center no-repeat;
     background-color: #FFFFFF;
     border: none;
-    top: 18px;
-    left: 336px;
     cursor: pointer;
     border-radius: 8px;
     margin-right: 24px;
     margin-top: 24px;
+    position: absolute;
 }
 
 .search-card__bookmark-icon_marked {
@@ -21,3 +20,16 @@
     background: url(../../../src/images/bookmark-icon-hover.svg) center no-repeat;
     background-color: #FFFFFF;
 }
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search-card__bookmark-icon {
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .search-card__bookmark-icon {
+        margin-right: 16px;
+        margin-top: 16px;
+    }
+  }

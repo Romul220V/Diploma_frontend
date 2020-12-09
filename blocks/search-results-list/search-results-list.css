@@ -12,3 +12,16 @@
 .search-results-list__2 {
     height: 1292px;
 }
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .search-results-list {
+        height: 654px;
+        max-width: 768px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .search-results-list {
+        height: 1576px;
+        max-width: 320px;
+    }
+  }

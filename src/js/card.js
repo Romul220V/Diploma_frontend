@@ -17,7 +17,8 @@ export default class Card {
     createCard() {
 
         const articleCard = document.createElement('div');
-        const articleImage = document.createElement('div');
+        const articleImageBlock = document.createElement('div');
+        const articleImage = document.createElement('img');
         const articleWarning = document.createElement('div');
         const articleWarningText = document.createElement('span');
         const articleBookmark = document.createElement('button');
@@ -30,7 +31,9 @@ export default class Card {
 
         articleCard.classList.add('search-card');
 
-        articleImage.setAttribute('style', 'background: url(' + this.image + ')');
+        articleImageBlock.classList.add('search-card__image-block');
+        articleImage.setAttribute('src', '' + this.image + '');
+        articleImage.setAttribute('alt', 'здесь могла быть ваша картинка');
         articleImage.classList.add('search-card__image');
         articleWarning.classList.add('search-card__warning');
         articleWarningText.classList.add('text_warning');
@@ -53,10 +56,11 @@ export default class Card {
         articleSourse.classList.add('search-card__sourse');
         articleSourse.textContent = this.source;
 
-        articleCard.appendChild(articleImage);
-        articleImage.appendChild(articleWarning);
+        articleCard.appendChild(articleImageBlock);
+        articleImageBlock.appendChild(articleImage);
+        articleImageBlock.appendChild(articleWarning);
         articleWarning.appendChild(articleWarningText);
-        articleImage.appendChild(articleBookmark);
+        articleImageBlock.appendChild(articleBookmark);
         articleCard.appendChild(articleDescription);
         articleDescription.appendChild(articleDate);
         articleDescription.appendChild(articleTitle);

@@ -1,8 +1,24 @@
 .title_aboutAuthor {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 46px;
-    color: #1A1B22;
-    padding-bottom: 24px;
-    margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  padding-bottom: 24px;
+  margin: 0;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .title_aboutAuthor {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 16px;
   }
+}
+
+@media screen and (max-width: 320px) {
+  .title_aboutAuthor {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 16px;
+  }
+}

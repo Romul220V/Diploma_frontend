@@ -19,7 +19,8 @@ export default class Card {
     createCard() {
 
         const articleCard = document.createElement('div');
-        const articleImage = document.createElement('div');
+        const articleImageBlock = document.createElement('div');
+        const articleImage = document.createElement('img');
         const articleKeyword = document.createElement('div');
         const articleWarningTextTag = document.createElement('span');
         const articleWarning = document.createElement('div');
@@ -34,13 +35,15 @@ export default class Card {
 
         articleCard.classList.add('search-card');
 
-        articleImage.setAttribute('style', 'background: url(' + this.image + ')');
+        articleImageBlock.classList.add('search-card__image-block');
+        articleImage.setAttribute('src', '' + this.image + '');
+        articleImage.setAttribute('alt', 'здесь могла быть ваша картинка');
         articleImage.classList.add('search-card__image');
         articleKeyword.classList.add('search-card__tag');
-        articleKeyword.textContent = this.keyword;
-        articleWarningTextTag.classList.add('text_warning');
+        articleWarningTextTag.classList.add('text', 'text_warning', 'text_warning-tag');
+        articleWarningTextTag.textContent = this.keyword;
         articleWarning.classList.add('search-card__warning');
-        articleWarningText.classList.add('text_warning');
+        articleWarningText.classList.add('text', 'text_warning', 'text_warning-delete');
         articleWarningText.textContent = "Убрать из сохранённых";
         articleDelete.classList.add('search-card__delete-icon');
         articleDelete.onmouseout = () => {
@@ -60,12 +63,13 @@ export default class Card {
         articleSourse.classList.add('search-card__sourse');
         articleSourse.textContent = this.source;
 
-        articleCard.appendChild(articleImage);
-        articleImage.appendChild(articleKeyword);
+        articleCard.appendChild(articleImageBlock);
+        articleImageBlock.appendChild(articleImage);
+        articleImageBlock.appendChild(articleKeyword);
         articleKeyword.appendChild(articleWarningTextTag);
-        articleImage.appendChild(articleWarning);
+        articleImageBlock.appendChild(articleWarning);
         articleWarning.appendChild(articleWarningText);
-        articleImage.appendChild(articleDelete);
+        articleImageBlock.appendChild(articleDelete);
         articleCard.appendChild(articleDescription);
         articleDescription.appendChild(articleDate);
         articleDescription.appendChild(articleTitle);

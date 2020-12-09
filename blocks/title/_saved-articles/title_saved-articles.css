@@ -1,9 +1,25 @@
 .title_saved-articles {
-    margin-left: 104px;
-    margin-top: 40px;
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    color: rgba(26, 27, 34, 0.5);
+  margin-left: 104px;
+  margin-top: 40px;
+  font-family: 'Roboto' !important;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .title_saved-articles {
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 24px;
   }
+}
+
+@media screen and (max-width: 320px) {
+  .title_saved-articles {
+    font-size: 12px;
+    margin-left: 16px;
+    margin-top: 8px;
+  }
+}

@@ -1,12 +1,10 @@
 @import url('../text/_search/text_search.css');
-
-@import url('../title/_footer/title_footer.css');
-@import url('../title/_header/title_header.css');
-@import url('../title/_popup-title/title_popup-title.css');
-@import url('../title/_saved-articles/title_saved-articles.css');
-@import url('../title/_search/title_search.css');
-@import url('../title/_search-card/title_search-card.css');
-@import url('../title/_search-results-list/title_search-results-list.css');
+@import url('../text/_aboutAuthor/text_aboutAuthor.css');
+@import url('../text/_warning/text_warning.css');
+@import url('../text/_search-card/text_search-card.css');
+@import url('../text/_saved-articles/text_saved-articles.css');
+@import url('../text/_saved-articles-tags/text_saved-articles-tags.css');
+@import url('../text/_popup/text_popup.css');
 
 .text {
   font-family: 'Roboto';
@@ -14,68 +12,4 @@
   font-weight: 900;
   font-size: 72px;
   color: #1A1B22;
-}
-
-.text_aboutAuthor1 {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 35px;
-}
-
-.text_aboutAuthor2 {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.text_warning {
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-  color: #000000;
-}
-
-.text_warning2 {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #000000;
-}
-
-.text_search-card {
-  margin: 16px 24px 0;
-  max-height: 110px;
-  margin-left: 24px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #1A1B22;
-}
-
-.text_saved-articles{
-  margin-left: 104px;
-  margin-top: 38px;
-  font-family: 'Roboto Slab';
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 46px;
-  color: #1A1B22;
-}
-
-.text_saved-articles-tags{
-  margin-left: 104px;
-  margin-top: 30px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: #1A1B22;
-}
-
-.text_popup{
-  font-family: 'Inter';
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  color: #2F71E5;
 }
