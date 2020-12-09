@@ -105,7 +105,7 @@ regDone.onclick = () => {
     userData.name = regForm.querySelectorAll('input')[2].value;
     api.signUp(userData).then((res) => {
         popupRegistration.openClose();
-        
+
         popupRegDone.openClose();
     })
 };
@@ -119,8 +119,16 @@ loggedInButton.onclick = () => {
 const tempSecondPage = login.querySelector('.popup__button');
 
 tempSecondPage.onclick = () => {
-    popupLogin.openClose();
-    document.location.href = 'index3.html';
+    const userData = {};
+    const userToken = {};
+    userData.email = loginForm.querySelectorAll('input')[0].value;
+    userData.password = loginForm.querySelectorAll('input')[1].value;
+    api.signIn(userData).then((res) => {
+
+        popupLogin.openClose();
+
+    })
+    // document.location.href = 'index3.html';
 };
 
 const searchFieldHeader = document.querySelector('.search');
