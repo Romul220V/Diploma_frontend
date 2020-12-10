@@ -47,7 +47,14 @@ const registration = document.querySelector('.popup_form_register');
 
 const popupRegistration = new Popup(registration);
 
-const regForm = registration.querySelector("form");
+const regForm = registration.querySelector('.popup__form');
+
+const mobile = document.querySelector('.popup_mobile');
+const popupMobile = new Popup(mobile);
+const openMobileButton = document.querySelector('.header__phone-button');
+openMobileButton.onclick = () => {
+    popupMobile.openClose();
+};
 const openFormButton = document.querySelector('.header__button_login-button');
 const closeRegistrationButton = document.querySelector('.popup__close_registration');
 
@@ -59,18 +66,12 @@ const loginFormButton = regForm.querySelector('.popup__another-choice_link');
 
 const closeLoginButton = document.querySelector('.popup__close_registered');
 
-const popupLoginEd = document.querySelector('.popup_form_login');
-
-const popupFormRegistration = document.querySelector('.popup_form_register');
-
-const loginForm = popupLoginEd.querySelector('.popup__form');
+const loginForm = login.querySelector('.popup__form');
 
 const loginValidator = new FormValidatorLogin(loginForm);
 loginValidator.setEventListeners();
 
-const regisForm = popupFormRegistration.querySelector('.popup__form');
-
-const regValidator = new FormValidator(regisForm);
+const regValidator = new FormValidator(regForm);
 
 regValidator.setEventListeners();
 
@@ -105,16 +106,18 @@ regDone.onclick = () => {
     userData.name = regForm.querySelectorAll('input')[2].value;
     api.signUp(userData).then((res) => {
         popupRegistration.openClose();
-        
+
         popupRegDone.openClose();
     })
 };
 
-const loggedInButton = regFormDone.querySelector('.popup__another-choice_link');
+const backToRegButton = loginForm.querySelector('.popup__another-choice_link');
 
-loggedInButton.onclick = () => {
-    popupRegDone.openClose();
+backToRegButton.onclick = () => {
+    popupRegistration.openClose();
     popupLogin.openClose();
+    loginValidator.checkInputValidity();
+    loginValidator.setSubmitButtonState();
 };
 const tempSecondPage = login.querySelector('.popup__button');
 

@@ -13,13 +13,13 @@
 @media screen and (min-width: 321px) and (max-width: 768px) {
     .search-card__image {
         width: 224px;
-        height: 150px;
+        /* height: 150px; */
     }
 }
 
 @media screen and (max-width: 320px) {
     .search-card__image {
         width: 288px;
-        height: 196px;
+        /* height: 196px; */
     }
 }

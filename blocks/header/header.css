@@ -2,7 +2,7 @@
 @import url(./__button/header__button.css);
 @import url(./__phone-button/header__phone-button.css);
 .header {
-  height: 80px;
+  /* height: 80px; */
   max-width: 1440px;
   display: flex;
   align-items: center;
@@ -11,14 +11,14 @@
 
 @media screen and (min-width: 321px) and (max-width: 768px) {
   .header {
-    height: 66px;
+    /* height: 66px; */
     max-width: 768px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .header {
-    height: 56px;
+    /* height: 56px; */
     max-width: 320px;
   }
 }

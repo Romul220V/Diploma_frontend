@@ -2,7 +2,7 @@
 @import url(./__main/aboutAuthor__main.css);
 @import url(./__photo/aboutAuthor__photo.css);
 .aboutAuthor {
-    height: 624px;
+    /* height: 624px; */
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
@@ -12,14 +12,14 @@
 
 @media screen and (min-width: 321px) and (max-width: 768px) {
     .aboutAuthor {
-        height: 354px;
+        /* height: 354px; */
         max-width: 768px;
     }
   }
   
   @media screen and (max-width: 320px) {
     .aboutAuthor {
-        height: 752px;
+        /* height: 752px; */
         max-width: 320px;
     }
   }

@@ -12,22 +12,22 @@
     border-radius: 100px;
     max-width: 608px;
     height: 64px;
-    margin: 0 416px;
+    margin: 0 29%;
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 518px) and (max-width: 768px) {
     .search__field {
         max-width: 488px;
         height: 56px;
-        margin: 0 auto 0;
+        margin: 0 21%;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 517px) {
     .search__field {
         max-width: 288px;
         height: 56px;
         flex-direction: column;
-        margin: 0 auto 0;
+        margin: 0 5%;
     }
 }

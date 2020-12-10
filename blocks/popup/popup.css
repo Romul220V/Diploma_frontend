@@ -22,3 +22,6 @@
 .popup_registered{
   border: red 1px solid;
 }
+.popup_mobile{
+  height: 45%;
+}

@@ -1,17 +1,17 @@
 .text_warning {
-    font-weight: 500;
-    font-size: 10px;
+    font-weight: 500 !important;
+    font-size: 10px !important;
     line-height: 12px;
-    color: #000000;
+    color: #000000 !important;
     padding:12px;
   }
   
   .text_warning-delete {
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 14px;
   }
   
   .text_warning-tag {
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 24px;
   }

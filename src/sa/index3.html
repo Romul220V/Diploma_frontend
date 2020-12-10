@@ -18,7 +18,7 @@
       <img class="header__phone-button" src="<%=require('../images/phone-button-black.jpg').default%>" alt="button">
       <ul class="header__buttons">
         <li><a class="header__button header__button_sa" href="index.html">Главная</a></li>
-        <li><a class="header__button header__button_sa" href="index2.html">Сохранённые статьи</a></li>
+        <li><a class="header__button header__button_sa" href="index3.html">Сохранённые статьи</a></li>
         <li><a class="header__button header__button_sa header__button_loggedin-button" href="#!">Имя<img
               class="header__button_pic" src="<%=require('../images/Union_black.svg').default%>" alt="button"></a></li>
       </ul>
@@ -29,7 +29,7 @@
       <h3 class="text text_saved-articles-tags">По ключевым словам: <b>Природа, Тайга</b> и <b>2-м другим</b></h3>
     </div>
 
-    <div class="search-results-list search-results-list__2">
+    <div class="search-results-list">
       <div class="search-results-list__cards">
         <template class="base-template">
           <div class="search-card">
@@ -57,6 +57,7 @@
 
     <footer class="footer">
       <h2 class="title title_footer">© 2020 Supersite, Powered by News API</h2>
+      <div class="footer__interactive">
       <ul class="footer__links">
         <li><a class="footer__link" href="index.html">Главная</a></li>
         <li><a class="footer__link" href="index2.html">Яндекс.Практикум</a></li>
@@ -64,9 +65,9 @@
       <ul class="footer__icons">
         <li><a class="footer__icon" href="https://github.com/Romul220V/Diploma_frontend/pull/1"
             alt="здесь могла быть ваша картинка"></a></li>
-        <li><a class="footer__icon footer__icon_2" href="https://yandex.ru/" alt="здесь могла быть ваша картинка"></a>
-        </li>
+        <li><a class="footer__icon footer__icon_2" href="https://yandex.ru/" alt="здесь могла быть ваша картинка"></a></li>
       </ul>
+    </div>
     </footer>
 
     <script src="<%= htmlWebpackPlugin.files.js %>"></script>

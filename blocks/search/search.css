@@ -4,21 +4,19 @@
 @import url(./search_search3.css);
 .search {
     background-image: url(../../src/images/search-image.jpg);
-    height: 576px;
+    min-height: 576px;
     left: 0px;
     top: 0px;
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 327px) and (max-width: 768px) {
     .search {
-      height: 400px;
       max-width: 768px;
     }
   }
   
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 326px) {
     .search {
-      height: 536px;
       max-width: 320px;
     }
   }

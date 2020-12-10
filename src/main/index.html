@@ -73,6 +73,7 @@
 
     <footer class="footer">
       <h2 class="title title_footer">© 2020 Supersite, Powered by News API</h2>
+      <div class="footer__interactive">
       <ul class="footer__links">
         <li><a class="footer__link" href="index.html">Главная</a></li>
         <li><a class="footer__link" href="index2.html">Яндекс.Практикум</a></li>
@@ -82,6 +83,7 @@
             alt="здесь могла быть ваша картинка"></a></li>
         <li><a class="footer__icon footer__icon_2" href="https://yandex.ru/" alt="здесь могла быть ваша картинка"></a></li>
       </ul>
+    </div>
     </footer>
 
     <div class="popup popup_form_register">
@@ -139,6 +141,18 @@
       </div>
     </div>
 
+    <div class="popup popup_mobile">
+      <div class="popup__content popup__content_mobile">
+        <img src="<%=require('../images/close-icon.svg').default%>" alt="close button"
+          class="popup__close popup__close_mobile">
+        <h3 class="title title_header title_popup-title">NewsExplorer</h3>
+        <ul class="header__buttons header__buttons_mobile">
+          <li><a class="header__button header__button_mobile" href="index.html">Главная</a></li>
+          <li><a class="header__button hheader__button_mobile" href="index3.html">Сохранённые статьи</a></li>
+          <li><a class="header__button header__button_login-button header__button_mobile">Авторизоваться</a></li>
+        </ul>
+      </div>
+    </div>
 
 
     <script src="<%= htmlWebpackPlugin.files.js %>"></script>
