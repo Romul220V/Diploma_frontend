@@ -14,14 +14,15 @@ export default class API {
                 if (res.ok) {
                     return res.json();
                 }
-                return Promise.reject(`Ошибка: ${res.status}`);
+                return Promise.reject(res.status)
             })
 
             .then((result) => {
                 return result;
             })
             .catch((err) => {
-                console.log(err);
+
+                return Promise.reject(err);
             });
     }
 
@@ -34,16 +35,15 @@ export default class API {
         })
             .then(res => {
                 if (res.ok) {
-                    console.log(document.cookie);
-                    let myCookie = "mycookie=hellocookie";
-                    document.cookie = myCookie;
+
                     return res.json();
                 }
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
 
             .then((result) => {
-                return result;
+                localStorage.setItem('token', result.token);
+                console.log(result.token);
             })
             .catch((err) => {
                 console.log(err);
