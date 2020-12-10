@@ -2,21 +2,21 @@
     display: flex;
     /* justify-content: space-between;
     align-items: center; */
-    padding: 80px 104px;
-    height: 464px;
+    padding: 80px 7.2%;
+    /* height: 464px; */
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 640px) and (max-width: 865px) {
     .aboutAuthor__content {
-        padding: 40px 40px;
-        height: 247px;
+        padding: 40px 5.2%;
+        /* height: 247px; */
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 639px) {
     .aboutAuthor__content {
         flex-direction: column;
-        padding: 24px 16px 80px;
-        height: 640px;
+        padding: 24px 5% 80px;
+        /* height: 640px; */
     }
 }

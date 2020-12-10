@@ -1,5 +1,5 @@
 .search-card__description{
-    height: 304px;
+    /* height: 304px; */
     display: flex;
     flex-direction: column;
 }

@@ -1,18 +1,18 @@
 .search-results-list__show-more {
     max-width: 288px;
-    height: 64px;
+    /* height: 64px; */
     background: #FFFFFF;
     box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
     border-radius: 80px;
     box-sizing: border-box;
-    padding: 18px 84px 21px;
+    padding: 18px 0 21px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     color: #1A1B22;
-    margin: 0 576px 80px;
+    margin: 0 40% 80px;
     border: none;
     display: block;
     cursor: pointer;
@@ -25,17 +25,17 @@
 @media screen and (min-width: 321px) and (max-width: 768px) {
     .search-results-list__show-more {
         max-width: 240px;
-        height: 56px;
-        padding: 15px 60px 17px;
-        margin: 0 auto 40px;
+        /* height: 56px; */
+        padding: 15px 0 17px;
+        margin: 0 35.4% 40px 33%;
     }
 }
 
 @media screen and (max-width: 320px) {
     .search-results-list__show-more {
         max-width: 288px;
-        height: 56px;
-        padding: 15px 84px 17px;
-        margin: 0 auto 32px;
+        /* height: 56px; */
+        padding: 15px 0 17px;
+        margin: 0 5% 32px;
     }
 }

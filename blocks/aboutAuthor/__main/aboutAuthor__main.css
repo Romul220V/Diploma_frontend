@@ -4,7 +4,7 @@
     margin: 51px 0 199px 56px;
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 865px) {
     .aboutAuthor__main {
         max-width: 424px;
         max-height: 242px;

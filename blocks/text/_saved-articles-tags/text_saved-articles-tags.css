@@ -1,17 +1,17 @@
 .text_saved-articles-tags {
     margin-left: 104px;
     margin-top: 30px;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 700 !important;
+    font-size: 18px !important;
     line-height: 24px;
-    color: #1A1B22;
+    color: #1A1B22 !important;
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px) {
     .text_saved-articles-tags {
         margin-left: 40px;
         margin-top: 16px;
-        font-size: 14px;
+        font-size: 14px !important;
         margin-right: 24px;
     }
 }
@@ -20,7 +20,7 @@
     .text_saved-articles-tags {
         margin-left: 15px;
         margin-top: 16px;
-        font-size: 18px;
+        font-size: 18px !important;
         margin-right: 24px;
     }
 }

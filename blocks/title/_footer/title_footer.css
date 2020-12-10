@@ -1,26 +1,54 @@
 .title_footer {
   font-family: 'Roboto'!important;
   max-width: 433px;
-  margin-left: 104px;
+  margin-left: 9.7%;
   margin-top: 32px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #B6BCBF;
+  padding-right: 36.4%;
+}
+@media screen and (min-width: 1104px) and (max-width: 1290px) {
+  .title_footer {
+    padding-right: 27.4%;
+  }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 1039px) and (max-width: 1103px) {
+  .title_footer {
+    margin-left: 5.7%; 
+    padding-right: 27.4%;
+  }
+}
+
+@media screen and (min-width: 903px) and (max-width: 1038px) {
+  .title_footer {
+    margin-left: 2.7%; 
+    padding-right: 20.4%;
+  }
+}
+
+@media screen and (min-width: 773px) and (max-width: 902px) {
+  .title_footer {
+    margin-left: 2.7%; 
+    padding-right: 7.4%;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 772px) {
   .title_footer {
     max-width: 300px;
-    margin-left: 40px;
+    margin-left: 5%;
     margin-top: 24px;
+    padding-right: 3.6%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .title_footer {
     max-width: 288px;
-    margin-left: 16px;
+    margin-left: 5%;
     margin-top: 30px;
+    padding-right: 0;
   }
 }

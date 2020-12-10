@@ -1,7 +1,15 @@
+@import url(./_mobile/popup__close_mobile.css);
 .popup__close {
   width: 40px;
   position: absolute;
   top: -40px;
   right: -40px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 320px)and (max-width: 502px) {
+  .popup__close {
+    top: -48px;
+    right: 0;
+  }
 }
