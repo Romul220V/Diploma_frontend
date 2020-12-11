@@ -7,7 +7,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px) {
