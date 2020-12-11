@@ -6,6 +6,8 @@
 @import url('../title/_search/title_search.css');
 @import url('../title/_search-card/title_search-card.css');
 @import url('../title/_search-results-list/title_search-results-list.css');
+@import url('../title/_mobile/title_mobile.css');
+
 .title {
   font-family: 'Roboto Slab';
   font-style: normal;

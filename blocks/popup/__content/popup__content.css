@@ -5,8 +5,7 @@
   border-radius: 10px;
   position: relative;
   box-sizing: border-box;
-  padding: 34px 36px;
-  padding-bottom: 28px;
+  padding: 34px 36px 28px;
 }
 
 @media screen and(min-width: 321px) and (max-width: 540px) {
@@ -30,6 +29,10 @@
 }
 
 .popup__content_mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #1A1B22;
   border-radius: 16px;
+  padding: 21px 16px 24px;
 }

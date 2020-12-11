@@ -6,7 +6,6 @@
 @import url(./_is-opened/popup_is-opened.css);
 @import url(./__error/__error_name.css);
 @import url(./__another-choice/popup__another-choice.css);
-
 .popup {
   position: fixed;
   top: 0;
@@ -19,9 +18,11 @@
   justify-content: center;
   display: none;
 }
-.popup_registered{
+
+.popup_registered {
   border: red 1px solid;
 }
-.popup_mobile{
-  height: 45%;
-}
+
+/* .popup_mobile {
+  height: calc(45% - 200px);
+} */

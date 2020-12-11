@@ -2,6 +2,7 @@
 @import url(./_login-button/header__button_login-button.css);
 @import url(./_loggedin-button/header__button_loggedin-button.css);
 @import url(./_pic/header__button_pic.css);
+@import url(./_mobile/header__button_mobile.css);
 .header__button {
     display: inline-block;
     margin: 0;
@@ -15,9 +16,11 @@
     display: block;
     cursor: pointer;
 }
+
 .header__button_sa {
     color: #1A1B22;
 }
+
 @media screen and (min-width: 321px) and (max-width: 768px) {
     .header__button {
         margin-right: 16px;
@@ -25,4 +28,4 @@
         padding: 8px 0;
         margin: 14px 16px 12px 0;
     }
-  }
+}

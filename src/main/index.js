@@ -55,7 +55,16 @@ const openMobileButton = document.querySelector('.header__phone-button');
 openMobileButton.onclick = () => {
     popupMobile.openClose();
 };
+const openFormButtonMobile = mobile.querySelector('.header__button_login-button');
+openFormButtonMobile.onclick = () => {
+    popupMobile.openClose();
+    popupRegistration.openClose();
+    loginValidator.setDefaultValue();
+    loginValidator.setSubmitButtonState();
+};
+
 const openFormButton = document.querySelector('.header__button_login-button');
+
 const closeRegistrationButton = document.querySelector('.popup__close_registration');
 
 const login = document.querySelector('.popup_form_login');
