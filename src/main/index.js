@@ -13,7 +13,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'Лента.ру',
         link: 'https://yandex.ru/',
-        image: './images/first-card.jpg'
+        image: '../src/images/first-card.jpg'
 
     },
     {
@@ -23,7 +23,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'Медуза',
         link: 'https://yandex.ru/',
-        image: './images/second-card.jpg'
+        image: '../src/images/second-card.jpg'
     },
     {
         keyword: 'Природа',
@@ -32,7 +32,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'Риа',
         link: 'https://yandex.ru/',
-        image: './images/third-card.jpg'
+        image: '../src/images/third-card.jpg'
     }
 ];
 const cardsList = document.querySelector('.search-results-list__cards');
@@ -121,6 +121,8 @@ regDone.onclick = () => {
         .catch((err) => { console.log(err) });
 };
 
+const loggedInName = document.querySelector('.header__button_loggedin-button');
+loggedInName.style.display = 'none';
 const backToRegButton = loginForm.querySelector('.popup__another-choice_link');
 
 backToRegButton.onclick = () => {
@@ -139,6 +141,11 @@ tempSecondPage.onclick = () => {
     api.signIn(userData).then((res) => {
 
         popupLogin.openClose();
+        openFormButton.style.display = 'none';
+        loggedInName.style.display = 'flex';
+        api.getUsers().then((result) => {
+            document.getElementById('Logged-name').textContent = result.name;
+        });
 
     })
     // document.location.href = 'index3.html';

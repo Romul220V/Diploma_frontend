@@ -12,7 +12,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'ДЗЕН',
         link: 'https://yandex.ru/',
-        image: './images/fourth-card.jpg'
+        image: '../src/images/fourth-card.jpg'
 
     },
     {
@@ -22,7 +22,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'АФИША',
         link: 'https://yandex.ru/',
-        image: './images/fifth-card.jpg'
+        image: '../src/images/fifth-card.jpg'
     },
     {
         keyword: 'Тайга',
@@ -31,7 +31,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'МЕДИАЗОНА',
         link: 'https://yandex.ru/',
-        image: './images/sixth-card.jpg'
+        image: '../src/images/sixth-card.jpg'
     },
     {
         keyword: 'Парки',
@@ -40,7 +40,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'ДЗЕН',
         link: 'https://yandex.ru/',
-        image: './images/fourth-card.jpg'
+        image: '../src/images/fourth-card.jpg'
     },
     {
         keyword: 'Фотография',
@@ -49,7 +49,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'АФИША',
         link: 'https://yandex.ru/',
-        image: '.images/fifth-card.jpg'
+        image: '../src/images/fifth-card.jpg'
     }
 ];
 const cardsList = document.querySelector('.search-results-list__cards');

@@ -50,4 +50,26 @@ export default class API {
             });
     }
 
+
+
+    getUsers() {
+        return fetch(`${this.baseUrl}/users/me`, {
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+            credentials: 'include',
+            method: 'GET'
+        })
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Ошибка: ${res.status}`);
+            })
+
+            .then((result) => {
+                return result;
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
 }
