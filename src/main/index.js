@@ -13,7 +13,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'Лента.ру',
         link: 'https://yandex.ru/',
-        image: '../src/images/first-card.jpg'
+        image: './images/first-card.jpg'
 
     },
     {
@@ -23,7 +23,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'Медуза',
         link: 'https://yandex.ru/',
-        image: '../src/images/second-card.jpg'
+        image: './images/second-card.jpg'
     },
     {
         keyword: 'Природа',
@@ -32,7 +32,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'Риа',
         link: 'https://yandex.ru/',
-        image: '../src/images/third-card.jpg'
+        image: './images/third-card.jpg'
     }
 ];
 const cardsList = document.querySelector('.search-results-list__cards');
@@ -118,7 +118,7 @@ regDone.onclick = () => {
 
         popupRegDone.openClose();
     })
-    .catch((err) => {console.log(err)});
+        .catch((err) => { console.log(err) });
 };
 
 const backToRegButton = loginForm.querySelector('.popup__another-choice_link');
