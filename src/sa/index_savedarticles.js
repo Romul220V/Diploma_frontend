@@ -2,6 +2,8 @@ import "./style_sa.css";
 
 import SearchResultList from '../js/search-result-list';
 import Card from '../js/card_saved';
+import Popup from '../js/Popup';
+import API from '../js/API';
 const initialCards = [
     {
         keyword: 'Природа',
@@ -10,7 +12,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'ДЗЕН',
         link: 'https://yandex.ru/',
-        image: '../src/images/fourth-card.jpg'
+        image: './images/fourth-card.jpg'
 
     },
     {
@@ -20,7 +22,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'АФИША',
         link: 'https://yandex.ru/',
-        image: '../src/images/fifth-card.jpg'
+        image: './images/fifth-card.jpg'
     },
     {
         keyword: 'Тайга',
@@ -29,7 +31,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'МЕДИАЗОНА',
         link: 'https://yandex.ru/',
-        image: '../src/images/sixth-card.jpg'
+        image: './images/sixth-card.jpg'
     },
     {
         keyword: 'Парки',
@@ -38,7 +40,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'ДЗЕН',
         link: 'https://yandex.ru/',
-        image: '../src/images/fourth-card.jpg'
+        image: './images/fourth-card.jpg'
     },
     {
         keyword: 'Фотография',
@@ -47,7 +49,7 @@ const initialCards = [
         date: '2 августа, 2019',
         source: 'АФИША',
         link: 'https://yandex.ru/',
-        image: '../src/images/fifth-card.jpg'
+        image: '.images/fifth-card.jpg'
     }
 ];
 const cardsList = document.querySelector('.search-results-list__cards');
@@ -56,3 +58,11 @@ const SearchResultsList = new SearchResultList(cardsList, newInitialCards);
 console.log(cardsList);
 console.log(newInitialCards);
 SearchResultsList.render();
+
+
+const mobile = document.querySelector('.popup_mobile');
+const popupMobile = new Popup(mobile);
+const openMobileButton = document.querySelector('.header__phone-button');
+openMobileButton.onclick = () => {
+    popupMobile.openClose();
+};

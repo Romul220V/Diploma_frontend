@@ -10,6 +10,7 @@
 @import url(../../blocks/search-results-list/search-results-list.css);
 @import url(../../blocks/search-card/search-card.css);
 @import url(../../blocks/footer/footer.css);
+@import url(../../blocks/popup/popup.css);
 
 body {
   background-color:white;
