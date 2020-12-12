@@ -10,6 +10,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: 'Roboto Slab', Arial, sans-serif;
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px) {
