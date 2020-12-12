@@ -10,6 +10,13 @@
   /* padding-right: 63px; */
 }
 
+@media screen and (min-width: 891px) and (max-width: 1086px) {
+  .title_search {
+    padding-top: 20px;
+  }
+}
+
+
 @media screen and (min-width: 765px) and (max-width: 890px) {
   .title_search {
     padding-top: 40px;
@@ -22,7 +29,7 @@
     line-height: 40px;
     max-width: 385px;
     /* height: 80px; */
-    margin: 0 42.7% 0 21%;
+    margin: 0 30.7% 0 21%;
     padding: 38px 0 0;
   }
 }

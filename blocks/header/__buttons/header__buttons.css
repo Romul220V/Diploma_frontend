@@ -1,6 +1,6 @@
 @import url('../__buttons/_mobile/header__buttons_mobile.css');
 .header__buttons {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

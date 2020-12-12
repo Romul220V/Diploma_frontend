@@ -1,5 +1,5 @@
 .popup__another-choice {
-    font-family: 'Inter';
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -13,6 +13,6 @@
     font-size: 18px;
     line-height: 22px;
     color: #2F71E5;
-    margin-left:5px;
+    margin-left: 5px;
     cursor: pointer;
 }

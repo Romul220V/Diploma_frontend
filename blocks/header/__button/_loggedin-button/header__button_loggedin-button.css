@@ -12,5 +12,9 @@
         margin-right: 15px 8px;
         padding: 8px 0;
         margin: 14px 16px 12px 0;
+
     }
+  }
+  .header__button_loggedin-button_sa {
+      display: flex !important;
   }

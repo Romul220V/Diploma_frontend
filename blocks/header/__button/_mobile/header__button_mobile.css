@@ -4,14 +4,25 @@
 }
 
 .header__button_mobile_login {
-    padding: 0 15% 0 20% !important;
+    padding: 15px 15% 15px 20% !important;
     margin-top: 62px !important;
-    font-size: 24px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+}
+
+.header__button_mobile_logout {
+    border: 1px solid white;
+    padding: 2px 15% !important;
+    margin-top: 62px !important;
+    font-size: 18px !important;
+    display: flex !important;
+    align-items: center;
+    line-height: 24px !important;
 }
 
 @media screen and (min-width: 321px) and (max-width: 567px) {
     .header__button_mobile_login {
-        padding: 0 15% 0 20% !important;
+        padding: 15px 15% 15px 20% !important;
     }
 }
 
@@ -19,6 +30,5 @@
     .header__button_mobile_login {
         padding: 0 0 0 5% !important;
         margin-top: 62px !important;
-        font-size: 24px !important;
     }
 }

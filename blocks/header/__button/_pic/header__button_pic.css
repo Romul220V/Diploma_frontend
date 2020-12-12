@@ -1,5 +1,25 @@
 .header__button_pic {
     height: 24px;
-    width:24px;
+    width: 24px;
     margin-left: 10px;
+}
+
+.header__button_pic_sa {
+    height: 48px;
+    width: 48px;
+    margin-top: 2px;
+    background-color: white;
+    border-radius: 19px 100px 100px 19px;
+}
+
+@media screen and (max-width: 320px) {
+    .header__button_pic_sa {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 1000px) {
+    .header__button_pic_sa {
+        margin-left: 15%;
+    }
 }
