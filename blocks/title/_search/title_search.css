@@ -29,7 +29,9 @@
 
 @media screen and (min-width: 321px) and (max-width: 518px) {
   .title_search {
-    padding: 0;
+    padding: 15;
+    margin: 0 8% 0;
+
   }
 }
 @media screen and (max-width: 320px) {

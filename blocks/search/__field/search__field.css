@@ -23,7 +23,17 @@
     }
 }
 
-@media screen and (max-width: 517px) {
+@media screen and (min-width: 321px) and (max-width: 517px){
+    .search__field {
+        height: 56px;
+        flex-direction: column;
+        margin: 0 5%;
+        /* align-items: flex-start;*/
+        /* если нужно чтобы текст в строке поиска в промежуточных вариантах был с левой стороны - расскоментриуй строку выше */
+    }
+}
+
+@media screen and (max-width: 320px) {
     .search__field {
         max-width: 288px;
         height: 56px;
