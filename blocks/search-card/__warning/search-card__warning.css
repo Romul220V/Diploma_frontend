@@ -16,6 +16,7 @@
     .search-card__warning {
         margin-top: 8px;
         right: 53px;
+        display: none !important;
     }
   }
   
@@ -23,5 +24,6 @@
     .search-card__warning {
         margin-top: 16px;
         right: 61px;
+        display: none !important;
     }
   }

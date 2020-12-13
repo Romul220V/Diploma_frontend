@@ -1,17 +1,23 @@
 .text_warning {
-    font-weight: 500 !important;
-    font-size: 10px !important;
-    line-height: 12px;
-    color: #000000 !important;
-    padding:12px;
-  }
-  
-  .text_warning-delete {
-    font-size: 12px !important;
-    line-height: 14px;
-  }
-  
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  line-height: 12px;
+  color: #000000 !important;
+  padding: 12px;
+}
+
+.text_warning-delete {
+  font-size: 12px !important;
+  line-height: 14px;
+}
+
+.text_warning-tag {
+  font-size: 14px !important;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .text_warning-tag {
-    font-size: 14px !important;
-    line-height: 24px;
+    padding: 8px 12px;
   }
+}

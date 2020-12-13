@@ -19,8 +19,10 @@
     left: 24px;
     position: absolute;
 }
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .search-card__tag {
-        top: 74px;
+        top: 16px;
+        left: 16px;
     }
-  }
+}

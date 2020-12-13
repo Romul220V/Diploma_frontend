@@ -27,7 +27,7 @@
       <h1 class="title title_search">Что творится в мире?</h1>
       <h2 class="text text_search">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
       <div class="search__field">
-        <input type="text" name="search__field" class="search__field-space" placeholder="Введите тему новости">
+        <input type="text" name="search__field" class="search__field-space" required placeholder="Введите тему новости">
         <button class="search__field-button">Искать</button>
       </div>
     </div>
@@ -95,15 +95,15 @@
         <h3 class="title title_popup-title">Регистрация</h3>
         <form class="popup__form" name="reg">
           <span class="text text_popup">Email</span>
-          <input type="email" name="mail"  required="" class="popup__input popup__input_type_mail"
+          <input type="email" name="mail"  required class="popup__input popup__input_type_mail"
             placeholder="введите почту">
           <span class="error_mail" id="1">ERROR!</span>
           <span class="text text_popup">Пароль</span>
-          <input type="password" name="password"  required="" class="popup__input popup__input_type_password"
+          <input type="password" name="password"  required class="popup__input popup__input_type_password"
             placeholder="введите пароль">
           <span class="error_password">ERROR!</span>
           <span class="text text_popup">Имя</span>
-          <input type="text" name="name"  required="" class="popup__input popup__input_type_name"
+          <input type="text" name="name"  required class="popup__input popup__input_type_name"
             placeholder="введите свое имя">
           <span class="error_name">ERROR!</span>
           <button type="submit" class="button popup__button" name="registration">Зарегистрироваться</button>
@@ -119,11 +119,11 @@
         <h3 class="title title_popup-title">Вход</h3>
         <form class="popup__form" name="entrance">
           <span class="text text_popup">Email</span>
-          <input type="email" name="mail"  required="" class="popup__input popup__input_type_mail"
+          <input type="email" name="mail"  required class="popup__input popup__input_type_mail"
             placeholder="введите почту">
           <span class="error_mail">ERROR!</span>
           <span class="text text_popup">Пароль</span>
-          <input type="password" name="password"  required="" class="popup__input popup__input_type_password"
+          <input type="password" name="password"  required class="popup__input popup__input_type_password"
             placeholder="введите пароль">
           <span class="error_password">ERROR!</span>
           <button type="submit" class="button popup__button" name="entrance-button">Войти</button>
