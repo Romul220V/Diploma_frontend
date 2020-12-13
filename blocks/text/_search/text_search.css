@@ -9,6 +9,12 @@
     padding: 32px 0 64px;
 }
 
+@media screen and (min-width: 765px) and (max-width: 768px) {
+    .text_search {
+        margin: 0 21%;
+    }
+  }
+
 @media screen and (min-width: 765px) and (max-width: 890px) {
     .text_search {
         padding-bottom: 20px;

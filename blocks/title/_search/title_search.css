@@ -23,6 +23,12 @@
   }
 }
 
+@media screen and (min-width: 765px) and (max-width: 768px) {
+  .title_search {
+    margin: 0 21%;
+  }
+}
+
 @media screen and (min-width: 321px) and (max-width: 764px) {
   .title_search {
     font-size: 36px;
