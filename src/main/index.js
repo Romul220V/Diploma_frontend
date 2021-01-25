@@ -79,7 +79,7 @@ const api = new API({
     baseUrl: ApiUrl
 });
 
-const NewsUrl = "https://newsapi.org/v2/";
+const NewsUrl = "https://nomoreparties.co/news/v2/";
 const apiNews = new NewsApi({
     baseUrl: NewsUrl
 });
@@ -139,7 +139,7 @@ searchFieldButton.onclick = () => {
     noresultsWindow.style.display = 'none';
     const searchWord = document.querySelector('.search__field-space').value;
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://newsapi.org/v2/everything?language=ru&q=' + searchWord + '&' + 'from=' + previousDate() + '&' + 'to=' + getDate() + '&' + 'pageSize=100' + '&' + 'apiKey=7fdacda9a907467baf3154b3f141b68f', [false]);
+    xhr.open('GET', 'https://nomoreparties.co/news/v2/everything?language=ru&q=' + searchWord + '&' + 'from=' + previousDate() + '&' + 'to=' + getDate() + '&' + 'pageSize=100' + '&' + 'apiKey=7fdacda9a907467baf3154b3f141b68f', [false]);
     xhr.send();
     xhr.onprogress = function () {
         preloaderWindow.style.display = 'block';
