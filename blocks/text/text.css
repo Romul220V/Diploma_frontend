@@ -1,4 +1,7 @@
 @import url('../text/_search/text_search.css');
+@import url('../text/_preloader/text_preloader.css');
+@import url('../text/_noresults/text_noresults1.css');
+@import url('../text/_noresults/text_noresults2.css');
 @import url('../text/_aboutAuthor/text_aboutAuthor.css');
 @import url('../text/_warning/text_warning.css');
 @import url('../text/_search-card/text_search-card.css');

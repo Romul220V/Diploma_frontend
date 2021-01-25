@@ -5,43 +5,13 @@ import FormValidator from '../js/FormValidator';
 import FormValidatorLogin from '../js/FormValidatorLogin';
 import Popup from '../js/Popup';
 import API from '../js/API';
-const initialCards = [
-    {
-        keyword: 'Природа',
-        title: 'Национальное достояние – парки',
-        text: 'В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.',
-        date: '2 августа, 2019',
-        source: 'Лента.ру',
-        link: 'https://yandex.ru/',
-        image: '../src/images/first-card.jpg'
+import NewsApi from '../js/api/NewsApi';
+import { getDate } from '../js/utils/utils';
+import { previousDate } from '../js/utils/utils';
 
-    },
-    {
-        keyword: 'Природа',
-        title: 'Лесные огоньки: история одной фотографии',
-        text: 'Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.',
-        date: '2 августа, 2019',
-        source: 'Медуза',
-        link: 'https://yandex.ru/',
-        image: '../src/images/second-card.jpg'
-    },
-    {
-        keyword: 'Природа',
-        title: '«Первозданная тайга»: новый фотопроект Игоря Шпиленка',
-        text: 'Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...',
-        date: '2 августа, 2019',
-        source: 'Риа',
-        link: 'https://yandex.ru/',
-        image: '../src/images/third-card.jpg'
-    }
-];
 const cardsList = document.querySelector('.search-results-list__cards');
-const newInitialCards = initialCards.map((element) => new Card(element));
-const SearchResultsList = new SearchResultList(cardsList, newInitialCards);
-console.log(cardsList);
-console.log(newInitialCards);
-SearchResultsList.render();
 
+const searchResultsList = new SearchResultList(cardsList, []);
 
 const registration = document.querySelector('.popup_form_register');
 
@@ -103,11 +73,17 @@ const popupRegDone = new Popup(regFormDone);
 
 const regDone = regForm.querySelector('.popup__button');
 
-// const ApiUrl = process.env.NODE_ENV === "production" ? "https://romullearnin.ru.com/api/" : "http://localhost:3000/";
-const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api" : "http://localhost:3000/api";
+ const ApiUrl = process.env.NODE_ENV === "production" ? "https://romullearnin.ru.com/api/" : "http://localhost:3000/";
+// const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api" : "http://localhost:3000/api";
 const api = new API({
     baseUrl: ApiUrl
 });
+
+const NewsUrl = "https://newsapi.org/v2/";
+const apiNews = new NewsApi({
+    baseUrl: NewsUrl
+});
+
 regDone.onclick = () => {
     const userData = {};
     userData.email = regForm.querySelectorAll('input')[0].value;
@@ -133,7 +109,8 @@ backToRegButton.onclick = () => {
 };
 const tempSecondPage = login.querySelector('.popup__button');
 
-tempSecondPage.onclick = () => {
+tempSecondPage.onclick = (e) => {
+    e.preventDefault();
     const userData = {};
     const userToken = {};
     userData.email = loginForm.querySelectorAll('input')[0].value;
@@ -143,22 +120,71 @@ tempSecondPage.onclick = () => {
         popupLogin.openClose();
         openFormButton.style.display = 'none';
         loggedInName.style.display = 'flex';
-        api.getUsers().then((result) => {
+        api.getUserData().then((result) => {
             document.getElementById('Logged-name').textContent = result.name;
             document.getElementById('Logged-name2').textContent = result.name;
         });
 
     })
-    // document.location.href = 'index3.html';
+    document.location.href = 'index3.html';
 };
 
 const searchFieldHeader = document.querySelector('.search');
 const searchFieldButton = searchFieldHeader.querySelector('.search__field-button');
+const preloaderWindow = document.querySelector('.preloader');
+const noresultsWindow = document.querySelector('.noresults');
+
 searchFieldButton.onclick = () => {
-    document.location.href = 'index.html';
+    cardsList.innerHTML = '';
+    noresultsWindow.style.display = 'none';
+    const searchWord = document.querySelector('.search__field-space').value;
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://newsapi.org/v2/everything?language=ru&q=' + searchWord + '&' + 'from=' + previousDate() + '&' + 'to=' + getDate() + '&' + 'pageSize=100' + '&' + 'apiKey=7fdacda9a907467baf3154b3f141b68f', [false]);
+    xhr.send();
+    xhr.onprogress = function () {
+        preloaderWindow.style.display = 'block';
+    };
+    xhr.onload = function () {
+        preloaderWindow.style.display = 'none';
+        if (searchWord.length === 0) {
+            console.log('empty')
+            return
+        };
+
+        apiNews.getNews(searchWord).then((res) => {
+            if (res.articles.length === 0) {
+                noresultsWindow.style.display = 'flex';
+                searchResultsListBlock.style.display = 'none';
+                console.log('no articles')
+                return
+            };
+            searchResultsListBlock.style.display = 'block';
+            // cardsList.innerHTML = '';
+            searchResultsList.countCards = 0;
+            console.log(res);
+            const newInitialCards = res.articles.map((element) => new Card(element));
+            newInitialCards.forEach(element => searchResultsList.addCard(element));
+            searchResultsList.render();
+        })
+    };
+    xhr.onerror = function () {
+
+        alert(`Ошибка соединения`);
+    };
 };
-const searchResultsList = document.querySelector('.search-results-list');
-const searchResultsMoreButton = searchResultsList.querySelector('.search-results-list__show-more');
+const searchResultsListBlock = document.querySelector('.search-results-list');
+const searchResultsMoreButton = searchResultsListBlock.querySelector('.search-results-list__show-more');
+
 searchResultsMoreButton.onclick = () => {
-    document.location.href = 'index.html';
+    const searchWord = document.querySelector('.search__field-space').value;
+    searchResultsListBlock.style.display = 'flex';
+    if (searchWord.length === 0) {
+        console.log('empty')
+        return
+    };
+    searchResultsList.render();
+    if (searchResultsList.cardDeck.length <= searchResultsList.countCards) {
+        searchResultsMoreButton.style.display = 'none';
+        return
+    }
 };

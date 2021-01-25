@@ -1,9 +1,8 @@
-export default class API {
+export default class MainApi {
     constructor(options) {
         this.baseUrl = options.baseUrl;
         this.headers = options.headers;
     };
-
     signUp(userData) {
         return fetch(`${this.baseUrl}/signup`, {
             headers: { 'Content-Type': 'application/json' },
@@ -50,8 +49,6 @@ export default class API {
             });
     }
 
-
-
     getUserData() {
         return fetch(`${this.baseUrl}/users/me`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
@@ -72,7 +69,6 @@ export default class API {
             });
     }
 
-    
     getArticles() {
         return fetch(`${this.baseUrl}/articles`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
@@ -131,4 +127,9 @@ export default class API {
                 console.log(err);
             });
     }
+
+
+
+
+
 }

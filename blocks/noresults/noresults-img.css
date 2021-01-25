@@ -1,0 +1,27 @@
+.noresults-img {
+    width: 96px;
+    height: 96px;
+    background: url(../../src/images/noresults.svg) center no-repeat;
+    /* background-color: #FFFFFF; */
+    border: none;
+    cursor: pointer;
+    margin: 7% 0 0 48%;
+}
+
+@media screen and (min-width: 518px) and (max-width: 768px) {
+    .noresults-img {
+        margin: 5% 0 0 45%;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 517px){
+    .noresults-img {
+        margin: 17% 0 0 40%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .noresults-img {
+        margin: 17% 0 0 35%;
+    }
+}

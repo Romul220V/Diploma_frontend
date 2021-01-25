@@ -19,8 +19,9 @@
         <ul class="header__buttons">
           <li><a class="header__button" href="index.html">Главная</a></li>
           <li><a class="header__button header__button_login-button">Авторизоваться</a></li>
-          <li><a class="header__button header__button_sa header__button_loggedin-button" href="#!"><span id="Logged-name"></span><img
-            class="header__button_pic" src="<%=require('../images/Union_black.svg').default%>" alt="button"></a></li>
+          <li><a class="header__button header__button_sa header__button_loggedin-button" href="#!"><span
+                id="Logged-name"></span><img class="header__button_pic"
+                src="<%=require('../images/Union_black.svg').default%>" alt="button"></a></li>
         </ul>
       </header>
 
@@ -30,6 +31,18 @@
         <input type="text" name="search__field" class="search__field-space" required placeholder="Введите тему новости">
         <button class="search__field-button">Искать</button>
       </div>
+    </div>
+
+    <div class="preloader">
+      <i class="circle-preloader">
+      </i>
+      <p class = "text text_preloader">Идет поиск новостей...</p>
+    </div>
+
+    <div class="noresults">
+      <img class="noresults-img"></img>
+      <p class = "text text_noresults1">Ничего не найдено</p>
+      <p class = "text text_noresults2">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
 
     <div class="search-results-list">
@@ -95,15 +108,15 @@
         <h3 class="title title_popup-title">Регистрация</h3>
         <form class="popup__form" name="reg">
           <span class="text text_popup">Email</span>
-          <input type="email" name="mail"  required class="popup__input popup__input_type_mail"
+          <input type="email" name="mail" required class="popup__input popup__input_type_mail"
             placeholder="введите почту">
           <span class="error_mail" id="1">ERROR!</span>
           <span class="text text_popup">Пароль</span>
-          <input type="password" name="password"  required class="popup__input popup__input_type_password"
+          <input type="password" name="password" required class="popup__input popup__input_type_password"
             placeholder="введите пароль">
           <span class="error_password">ERROR!</span>
           <span class="text text_popup">Имя</span>
-          <input type="text" name="name"  required class="popup__input popup__input_type_name"
+          <input type="text" name="name" required class="popup__input popup__input_type_name"
             placeholder="введите свое имя">
           <span class="error_name">ERROR!</span>
           <button type="submit" class="button popup__button" name="registration">Зарегистрироваться</button>
@@ -119,11 +132,11 @@
         <h3 class="title title_popup-title">Вход</h3>
         <form class="popup__form" name="entrance">
           <span class="text text_popup">Email</span>
-          <input type="email" name="mail"  required class="popup__input popup__input_type_mail"
+          <input type="email" name="mail" required class="popup__input popup__input_type_mail"
             placeholder="введите почту">
           <span class="error_mail">ERROR!</span>
           <span class="text text_popup">Пароль</span>
-          <input type="password" name="password"  required class="popup__input popup__input_type_password"
+          <input type="password" name="password" required class="popup__input popup__input_type_password"
             placeholder="введите пароль">
           <span class="error_password">ERROR!</span>
           <button type="submit" class="button popup__button" name="entrance-button">Войти</button>

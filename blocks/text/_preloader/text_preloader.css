@@ -1,0 +1,21 @@
+.text_preloader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    width: 280px;
+    color: #B6BCBF;
+    margin: 24px 43%;
+}
+
+@media screen and (min-width: 321px) and (max-width: 517px){
+    .text_preloader {
+        margin: 24px 31%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .text_preloader {
+        margin: 24px 20%;
+    }
+}

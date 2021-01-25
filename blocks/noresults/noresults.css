@@ -1,0 +1,22 @@
+@import url(./noresults-img.css);
+.noresults {
+    max-width: 1440px;
+    margin: 0;
+    background-color: #F5F6F7;
+    overflow: hidden;
+    /* display: none; */
+    display: none;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .noresults {
+      max-width: 768px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .noresults {
+      max-width: 320px;
+    }
+  }
