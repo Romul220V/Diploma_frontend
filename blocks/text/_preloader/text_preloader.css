@@ -1,11 +1,11 @@
 .text_preloader {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
     width: 280px;
-    color: #B6BCBF;
+    color: #B6BCBF !important;
     margin: 24px 43%;
 }
 

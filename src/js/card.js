@@ -1,16 +1,41 @@
+import { api } from '../main/index.js';
 export default class Card {
-    constructor(cardData) {
+    constructor(cardData, searchWord) {
         this.title = cardData.title;
         this.text = cardData.description;
         this.date = cardData.publishedAt;
         this.source = cardData.source.name;
         this.link = cardData.url;
         this.image = cardData.urlToImage;
+        this.cardData = {
+            title: cardData.title,
+            text: cardData.description,
+            date: cardData.publishedAt,
+            source: cardData.source.name,
+            link: cardData.url,
+            image: cardData.urlToImage,
+            keyword: searchWord
+        }
     };
-    bookmark(event) {
-        if (event.target.classList.contains('search-card__bookmark-icon')) {
-            event.target.classList.toggle('search-card__bookmark-icon_marked');
+    bookmark(event, cardData) {
+        if (event.target.classList.contains('search-card__bookmark-icon') && localStorage.getItem('token')) {
+            if (event.target.classList.contains('search-card__bookmark-icon_marked')) {
+                event.target.classList.toggle('search-card__bookmark-icon_marked');
+                api.getArticles()
+                    .then((res) => {
+                       const artID = res.data.find(elem => elem.title == cardData.title);
+                       console.log(res.data);
+                       console.log(cardData.link);
+                       (api.removeArticle(artID._id));
+                    })
+            }
+            else {
+                event.target.classList.toggle('search-card__bookmark-icon_marked');
+                console.log(cardData);
+                api.createArticle(cardData);
+            }
         };
+        return
     }
 
     createCard() {
@@ -42,7 +67,10 @@ export default class Card {
             articleWarning.style.display = 'none';
         };
         articleBookmark.onmouseover = () => {
-            articleWarning.style.display = 'flex';
+            if (localStorage.getItem('token')) {
+                articleWarning.style.display = 'none';
+            }
+            else { articleWarning.style.display = 'flex'; }
         };
         articleDescription.classList.add('search-card__description');
         articleDate.classList.add('search-card__date');
@@ -76,9 +104,8 @@ export default class Card {
         articleDescription.appendChild(articleSourse);
 
         this.articleCard = articleCard;
-        articleBookmark.addEventListener('click', this.bookmark);
+        articleBookmark.addEventListener('click', (e) => this.bookmark(e, this.cardData));
         this.articleBookmark = articleBookmark;
         return articleCard;
     };
-
 };

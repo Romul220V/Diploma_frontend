@@ -18,8 +18,13 @@
     font-family: 'Roboto', Arial, sans-serif;
 }
 
+.header__button:hover {
+    opacity: 0.5;
+}
+
 .header__button_sa {
     color: #1A1B22;
+    display: none;
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px) {

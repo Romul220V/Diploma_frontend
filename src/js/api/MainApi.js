@@ -1,10 +1,11 @@
-export default class MainApi {
+export default class API {
     constructor(options) {
         this.baseUrl = options.baseUrl;
         this.headers = options.headers;
     };
+
     signUp(userData) {
-        return fetch(`${this.baseUrl}/signup`, {
+        return fetch(`${this.baseUrl}signup`, {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST', body: JSON.stringify(userData)
 
@@ -26,7 +27,7 @@ export default class MainApi {
     }
 
     signIn(userData) {
-        return fetch(`${this.baseUrl}/signin`, {
+        return fetch(`${this.baseUrl}signin`, {
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
             method: 'POST', body: JSON.stringify(userData)
@@ -46,8 +47,11 @@ export default class MainApi {
             })
             .catch((err) => {
                 console.log(err);
+                return 'err';
             });
     }
+
+
 
     getUserData() {
         return fetch(`${this.baseUrl}/users/me`, {
@@ -69,6 +73,7 @@ export default class MainApi {
             });
     }
 
+    
     getArticles() {
         return fetch(`${this.baseUrl}/articles`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
@@ -89,7 +94,7 @@ export default class MainApi {
             });
     }
     createArticle(articleData) {
-        return fetch(`${this.baseUrl}/articles`, {
+        return fetch(`${this.baseUrl}articles`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
             credentials: 'include',
             method: 'POST', body: JSON.stringify(articleData)
@@ -109,7 +114,7 @@ export default class MainApi {
     }
 
     removeArticle(id) {
-        return fetch(`${this.baseUrl}/articles/` + id, {
+        return fetch(`${this.baseUrl}articles/` + id, {
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
             method: 'DELETE'
@@ -127,9 +132,4 @@ export default class MainApi {
                 console.log(err);
             });
     }
-
-
-
-
-
 }

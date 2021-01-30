@@ -17,16 +17,17 @@
       <h2 class="title title_header title_header3">NewsExplorer</h2>
       <img class="header__phone-button" src="<%=require('../images/phone-button-black.jpg').default%>" alt="button">
       <ul class="header__buttons">
-        <li><a class="header__button header__button_sa" href="index.html">Главная</a></li>
+        <li><a class="header__button" href ='index.html' id="Mainpage">Главная</a></li>
         <li><a class="header__button header__button_sa" href="index3.html">Сохранённые статьи</a></li>
-        <li><a class="header__button header__button_sa header__button_loggedin-button header__button_loggedin-button_sa" href="#!"><span id="Logged-name">NAME</span><img
-              class="header__button_pic" src="<%=require('../images/Union_black.svg').default%>" alt="button"></a></li>
+        <li><a class="header__button header__button_sa header__button_loggedin-button" href="#!"><span
+          id="Logged-name"></span><img class="header__button_pic" src="<%=require('../images/Union_black.svg').default%>" alt="button"></a></li>
       </ul>
     </header>
     <div class="saved-articles">
       <h2 class="title title_saved-articles">Сохранённые статьи</h2>
-      <h3 class="text text_saved-articles">Грета, у вас 5 сохранённых статей</h3>
-      <h3 class="text text_saved-articles-tags">По ключевым словам: <b>Природа, Тайга</b> и <b>2-м другим</b></h3>
+      <h3 class="text text_saved-articles" id="Greeting"></h3>
+      <h3 class="text text_saved-articles-tags" id="Keywords"></h3>
+      <!-- <h3 class="text text_saved-articles-tags">По ключевым словам: <b>Природа, Тайга</b> и <b>2-м другим</b></h3> -->
     </div>
 
     <div class="search-results-list">

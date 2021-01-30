@@ -19,5 +19,8 @@ export default class SearchResultList {
         this.countCards += 3;
         console.log(this.countCards);
     }
-
+    renderAll() {
+        this.cardDeck.forEach(element => this.renderCard(element));
+        console.log(this.countCards);
+    }
 }

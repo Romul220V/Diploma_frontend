@@ -10,7 +10,7 @@ import { getDate } from '../js/utils/utils';
 import { previousDate } from '../js/utils/utils';
 
 const cardsList = document.querySelector('.search-results-list__cards');
-
+const savedArticlesLink = document.querySelector('.header__button_sa');
 const searchResultsList = new SearchResultList(cardsList, []);
 
 const registration = document.querySelector('.popup_form_register');
@@ -54,6 +54,21 @@ const regValidator = new FormValidator(regForm);
 
 regValidator.setEventListeners();
 
+window.onload = () => {
+    if (localStorage.getItem('token')) {
+        openFormButton.style.display = 'none';
+        loggedInName.style.display = 'flex';
+        loggedInName.style.color = '#FFFFFF';
+        loggedInName.style.border = '1px solid white';
+        savedArticlesLink.style.display = 'inline-block';
+        savedArticlesLink.style.color = '#FFFFFF';
+        api.getUserData().then((result) => {
+            document.getElementById('Logged-name').textContent = result.name;
+        });
+
+    };
+};
+
 openFormButton.onclick = () => {
     popupRegistration.openClose();
     loginValidator.setDefaultValue();
@@ -73,9 +88,9 @@ const popupRegDone = new Popup(regFormDone);
 
 const regDone = regForm.querySelector('.popup__button');
 
- const ApiUrl = process.env.NODE_ENV === "production" ? "https://romullearnin.ru.com/api/" : "http://localhost:3000/";
+const ApiUrl = process.env.NODE_ENV === "production" ? "https://romullearnin.ru.com/api/" : "http://localhost:3000/api/";
 // const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api" : "http://localhost:3000/api";
-const api = new API({
+export const api = new API({
     baseUrl: ApiUrl
 });
 
@@ -90,6 +105,11 @@ regDone.onclick = () => {
     userData.password = regForm.querySelectorAll('input')[1].value;
     userData.name = regForm.querySelectorAll('input')[2].value;
     api.signUp(userData).then((res) => {
+        if (res.status !== 200) {
+            console.log('error')
+            //show error
+            return
+        };
         popupRegistration.openClose();
 
         popupRegDone.openClose();
@@ -101,32 +121,44 @@ const loggedInName = document.querySelector('.header__button_loggedin-button');
 loggedInName.style.display = 'none';
 const backToRegButton = loginForm.querySelector('.popup__another-choice_link');
 
+loggedInName.onclick = () => {
+    localStorage.removeItem('token');
+    document.location.href = 'index.html';
+};
+
 backToRegButton.onclick = () => {
     popupRegistration.openClose();
     popupLogin.openClose();
     loginValidator.checkInputValidity();
     loginValidator.setSubmitButtonState();
 };
-const tempSecondPage = login.querySelector('.popup__button');
+const logIn = login.querySelector('.popup__button');
 
-tempSecondPage.onclick = (e) => {
+logIn.onclick = (e) => {
     e.preventDefault();
     const userData = {};
     const userToken = {};
     userData.email = loginForm.querySelectorAll('input')[0].value;
     userData.password = loginForm.querySelectorAll('input')[1].value;
-    api.signIn(userData).then((res) => {
 
+    api.signIn(userData).then((res) => {
+        if (res === 'err') {
+            return;
+        };
         popupLogin.openClose();
         openFormButton.style.display = 'none';
         loggedInName.style.display = 'flex';
+        loggedInName.style.color = '#FFFFFF';
+        loggedInName.style.border = '1px solid white';
+        savedArticlesLink.style.display = 'inline-block';
+        savedArticlesLink.style.color = '#FFFFFF';
         api.getUserData().then((result) => {
             document.getElementById('Logged-name').textContent = result.name;
-            document.getElementById('Logged-name2').textContent = result.name;
+            // document.getElementById('Logged-name2').textContent = result.name;
         });
 
     })
-    document.location.href = 'index3.html';
+    // document.location.href = 'index3.html';
 };
 
 const searchFieldHeader = document.querySelector('.search');
@@ -162,7 +194,7 @@ searchFieldButton.onclick = () => {
             // cardsList.innerHTML = '';
             searchResultsList.countCards = 0;
             console.log(res);
-            const newInitialCards = res.articles.map((element) => new Card(element));
+            const newInitialCards = res.articles.map((element) => new Card(element, searchWord));
             newInitialCards.forEach(element => searchResultsList.addCard(element));
             searchResultsList.render();
         })

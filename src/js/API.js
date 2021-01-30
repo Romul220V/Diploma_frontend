@@ -5,7 +5,7 @@ export default class API {
     };
 
     signUp(userData) {
-        return fetch(`${this.baseUrl}/signup`, {
+        return fetch(`${this.baseUrl}signup`, {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST', body: JSON.stringify(userData)
 
@@ -27,7 +27,7 @@ export default class API {
     }
 
     signIn(userData) {
-        return fetch(`${this.baseUrl}/signin`, {
+        return fetch(`${this.baseUrl}signin`, {
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
             method: 'POST', body: JSON.stringify(userData)
@@ -47,13 +47,14 @@ export default class API {
             })
             .catch((err) => {
                 console.log(err);
+                return 'err';
             });
     }
 
 
 
     getUserData() {
-        return fetch(`${this.baseUrl}/users/me`, {
+        return fetch(`${this.baseUrl}users/me`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
             method: 'GET'
         })
@@ -74,7 +75,7 @@ export default class API {
 
     
     getArticles() {
-        return fetch(`${this.baseUrl}/articles`, {
+        return fetch(`${this.baseUrl}articles`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
             method: 'GET'
         })
@@ -93,7 +94,7 @@ export default class API {
             });
     }
     createArticle(articleData) {
-        return fetch(`${this.baseUrl}/articles`, {
+        return fetch(`${this.baseUrl}articles`, {
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
             credentials: 'include',
             method: 'POST', body: JSON.stringify(articleData)
@@ -113,8 +114,8 @@ export default class API {
     }
 
     removeArticle(id) {
-        return fetch(`${this.baseUrl}/articles/` + id, {
-            headers: { 'Content-Type': 'application/json' },
+        return fetch(`${this.baseUrl}articles/` + id, {
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
             credentials: 'include',
             method: 'DELETE'
 
