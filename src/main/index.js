@@ -99,23 +99,38 @@ const apiNews = new NewsApi({
     baseUrl: NewsUrl
 });
 
-regDone.onclick = () => {
+regDone.onclick = (e) => {
+    e.preventDefault();
     const userData = {};
     userData.email = regForm.querySelectorAll('input')[0].value;
     userData.password = regForm.querySelectorAll('input')[1].value;
     userData.name = regForm.querySelectorAll('input')[2].value;
-    api.signUp(userData).then((res) => {
-        if (res.status !== 200) {
-            console.log('error')
-            //show error
-            return
-        };
-        popupRegistration.openClose();
-
-        popupRegDone.openClose();
-    })
+    api.signUp(userData)
+        .then(() => {
+            popupRegistration.openClose();
+            popupRegDone.openClose();
+            //entry button
+        })
         .catch((err) => { console.log(err) });
 };
+
+// For testing purposes
+
+// const regDoneTest = document.querySelector('.aboutAuthor__photo');
+
+// regDoneTest.onclick = () => {
+//     popupRegDone.openClose();
+// };
+// const popupRegisterSucsess = document.querySelector('.popup_registered');
+// const entryRedirect = popupRegisterSucsess.querySelector('.popup__another-choice_link');
+
+// entryRedirect.onclick = (e) => {
+//     e.preventDefault();
+//     popupRegDone.openClose();
+//     popupLogin.openClose();
+//     loginValidator.checkInputValidity();
+//     loginValidator.setSubmitButtonState();
+// };
 
 const loggedInName = document.querySelector('.header__button_loggedin-button');
 loggedInName.style.display = 'none';
@@ -132,6 +147,7 @@ backToRegButton.onclick = () => {
     loginValidator.checkInputValidity();
     loginValidator.setSubmitButtonState();
 };
+
 const logIn = login.querySelector('.popup__button');
 
 logIn.onclick = (e) => {
@@ -154,11 +170,9 @@ logIn.onclick = (e) => {
         savedArticlesLink.style.color = '#FFFFFF';
         api.getUserData().then((result) => {
             document.getElementById('Logged-name').textContent = result.name;
-            // document.getElementById('Logged-name2').textContent = result.name;
         });
 
     })
-    // document.location.href = 'index3.html';
 };
 
 const searchFieldHeader = document.querySelector('.search');
@@ -167,6 +181,7 @@ const preloaderWindow = document.querySelector('.preloader');
 const noresultsWindow = document.querySelector('.noresults');
 
 searchFieldButton.onclick = () => {
+    searchResultsList.clearAll();
     cardsList.innerHTML = '';
     noresultsWindow.style.display = 'none';
     const searchWord = document.querySelector('.search__field-space').value;

@@ -3,11 +3,11 @@ import "./style_sa.css";
 import SearchResultList from '../js/search-result-list';
 import Card from '../js/card_saved';
 import Popup from '../js/Popup';
-import MainAPI from '../js/api/MainApi';
+import API from '../js/API';
 //import NewsCardList from '../js/components/NewsCardList';
 
-const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api" : "http://localhost:3000/api";
-const mainApi = new MainAPI({
+const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api/" : "http://localhost:3000/api/";
+export const mainApi = new API({
     baseUrl: ApiUrl
 });
 
@@ -15,6 +15,7 @@ const mainApi = new MainAPI({
 const loggedInName = document.querySelector('.header__button_loggedin-button');
 const savedArticlesLink = document.querySelector('.header__button_sa');
 const mainPage = document.getElementById('Mainpage')
+
 
 window.onload = () => {
     if (localStorage.getItem('token')) {
@@ -25,10 +26,39 @@ window.onload = () => {
         mainApi.getUserData().then((result) => {
             mainApi.getArticles()
                 .then((res) => {
+                    const keywords = res.data.map((card) => card.keyword);
+                    const keywordDictionary = {};
+                    keywords.forEach(element => {
+                        if (keywordDictionary.hasOwnProperty(element)) {
+                            keywordDictionary[element] += 1;
+                        }
+                        else {
+                            keywordDictionary[element] = 1;
+                        }
+                    });
+                    console.log(keywordDictionary);
+
+                    let sortedKeywords = Object.keys(keywordDictionary);
+                    sortedKeywords.sort((a, b) => {
+                        if (keywordDictionary[a] < keywordDictionary[b]) {
+                            return 1
+                        }
+                        else {
+                            return -1
+                        };
+                    });
+                    console.log('sortedKeywords');
+                    console.log(sortedKeywords);
+                    console.log('sortedKeywords');
                     const artNumber = res.data.length;
                     document.getElementById('Logged-name').textContent = result.name;
                     document.getElementById('Greeting').textContent = result.name + ', у вас ' + artNumber + ' сохранённых статей';
-                    document.getElementById('Keywords').textContent = 'По ключевым словам: ' + '' + ', у вас ';
+                    if (artNumber <= 3) {
+                    document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + sortedKeywords[2];
+                    }
+                    else {
+                        document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (artNumber -2) +'-м другим'; 
+                    }
                 })
 
         });

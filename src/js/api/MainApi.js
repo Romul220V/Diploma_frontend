@@ -114,8 +114,8 @@ export default class API {
     }
 
     removeArticle(id) {
-        return fetch(`${this.baseUrl}articles/` + id, {
-            headers: { 'Content-Type': 'application/json' },
+        return fetch(`${this.baseUrl}/articles/` + id, {
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
             credentials: 'include',
             method: 'DELETE'
 

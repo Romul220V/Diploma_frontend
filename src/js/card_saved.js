@@ -1,3 +1,4 @@
+import { mainApi } from '../sa/index_savedarticles.js';
 export default class Card {
     constructor(cardData) {
         this.keyword = cardData.keyword;
@@ -8,10 +9,25 @@ export default class Card {
         this.link = cardData.link;
         this.image = cardData.image;
         this.remove = this.remove.bind(this);
+        this.cardData = {
+            title: cardData.title,
+            text: cardData.description,
+            date: cardData.publishedAt,
+            source: cardData.source.name,
+            link: cardData.url,
+            image: cardData.urlToImage,
+        }
     };
 
-    remove() {
+    remove(event, cardData) {
         this.articleDelete.removeEventListener('click', this.remove);
+        mainApi.getArticles()
+            .then((res) => {
+                const artID = res.data.find(elem => elem.title == cardData.title);
+                console.log(res.data);
+                console.log(cardData.link);
+                (mainApi.removeArticle(artID._id));
+            })
         this.articleCard.remove();
     };
 
@@ -85,7 +101,7 @@ export default class Card {
         articleDescription.appendChild(articleText);
         articleDescription.appendChild(articleSourse);
 
-        articleDelete.addEventListener('click', this.remove);
+        articleDelete.addEventListener('click', (e) => this.remove(e, this.cardData));
         this.articleDelete = articleDelete;
         this.articleCard = articleCard;
         return articleCard;

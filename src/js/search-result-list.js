@@ -23,4 +23,7 @@ export default class SearchResultList {
         this.cardDeck.forEach(element => this.renderCard(element));
         console.log(this.countCards);
     }
+    clearAll(){
+        this.cardDeck = [];
+    }
 }
