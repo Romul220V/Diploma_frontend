@@ -53,29 +53,26 @@ window.onload = () => {
                     const artNumber = res.data.length;
                     document.getElementById('Logged-name').textContent = result.name;
                     document.getElementById('Greeting').textContent = result.name + ', у вас ' + artNumber + ' сохранённых статей';
-                    if (artNumber === 3) {
+                    if (sortedKeywords.length === 3) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + sortedKeywords[2];
                     }
-                    if (artNumber === 2) {
+                    if (sortedKeywords.length === 2) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ' и ' + sortedKeywords[1];
                     }
-
-                    if (artNumber === 1) {
+                    if (sortedKeywords.length === 1) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0];
                     }
-                    if (artNumber === 0) {
+                    if (sortedKeywords.length === 0) {
                         document.getElementById('Keywords').textContent = 'Вы не сохранили ни одной новости, попробуйте еще раз';
                     }
-                    if (artNumber > 3) {
+                    if (sortedKeywords.length > 3) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
                     }
                     // else {
                     //     document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
                     // }
                 })
-
         });
-
         const articlesList = document.querySelector('.search-results-list__cards');
         const searchResultsListBlock = document.querySelector('.search-results-list');
         searchResultsListBlock.style.display = 'flex';
@@ -92,33 +89,9 @@ window.onload = () => {
         document.location.href = 'index.html'
     }
 }
-
-
 const mobile = document.querySelector('.popup_mobile');
 const popupMobile = new Popup(mobile);
 const openMobileButton = document.querySelector('.header__phone-button');
 openMobileButton.onclick = () => {
     popupMobile.openClose();
 };
-
-
-
-// window.onload = () => {
-// const articlesList = document.querySelector('.search-results-list__cards');
-
-// const savedArticles = new NewsCardList(articlesList, []);
-
-// api.getArticles().then((res) => {
-//     const newInitialArticles = res.map((element) => new Card(element));
-//     newInitialArticles.forEach(element => savedArticles.addCard(element));
-//     savedArticles.render();
-// })
-
-// }
-
-// const loggedInName = document.querySelector('.header__button_loggedin-button');
-// loggedInName.onclick = () => {
-//     localStorage.removeItem('token');
-//     document.location.href = 'index.html';
-// };
-
