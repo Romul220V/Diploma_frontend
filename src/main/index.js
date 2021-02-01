@@ -116,21 +116,21 @@ regDone.onclick = (e) => {
 
 // For testing purposes
 
-// const regDoneTest = document.querySelector('.aboutAuthor__photo');
+//  const regDoneTest = document.querySelector('.aboutAuthor__photo');
 
-// regDoneTest.onclick = () => {
-//     popupRegDone.openClose();
-// };
-// const popupRegisterSucsess = document.querySelector('.popup_registered');
-// const entryRedirect = popupRegisterSucsess.querySelector('.popup__another-choice_link');
+//  regDoneTest.onclick = () => {
+//      popupRegDone.openClose();
+//  };
+ const popupRegisterSucsess = document.querySelector('.popup_registered');
+ const entryRedirect = popupRegisterSucsess.querySelector('.popup__another-choice_link');
 
-// entryRedirect.onclick = (e) => {
-//     e.preventDefault();
-//     popupRegDone.openClose();
-//     popupLogin.openClose();
-//     loginValidator.checkInputValidity();
-//     loginValidator.setSubmitButtonState();
-// };
+ entryRedirect.onclick = (e) => {
+     e.preventDefault();
+     popupRegDone.openClose();
+     popupLogin.openClose();
+     loginValidator.checkInputValidity();
+     loginValidator.setSubmitButtonState();
+ };
 
 const loggedInName = document.querySelector('.header__button_loggedin-button');
 loggedInName.style.display = 'none';
