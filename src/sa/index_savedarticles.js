@@ -53,18 +53,21 @@ window.onload = () => {
                     const artNumber = res.data.length;
                     document.getElementById('Logged-name').textContent = result.name;
                     document.getElementById('Greeting').textContent = result.name + ', у вас ' + artNumber + ' сохранённых статей';
-                    if (artNumber == 3) {
+                    if (artNumber === 3) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + sortedKeywords[2];
                     }
-                    if (artNumber == 2) {
+                    if (artNumber === 2) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ' и ' + sortedKeywords[1];
                     }
 
-                    if (artNumber == 1) {
+                    if (artNumber === 1) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0];
                     }
                     if (artNumber === 0) {
                         document.getElementById('Keywords').textContent = 'Вы не сохранили ни одной новости, попробуйте еще раз';
+                    }
+                    if (artNumber > 3) {
+                        document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
                     }
                     else {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
