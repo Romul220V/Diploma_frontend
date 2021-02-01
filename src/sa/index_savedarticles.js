@@ -6,7 +6,7 @@ import Popup from '../js/Popup';
 import API from '../js/API';
 //import NewsCardList from '../js/components/NewsCardList';
 
-const ApiUrl = process.env.NODE_ENV === "production" ? "http://localhost:3000/api/" : "http://localhost:3000/api/";
+const ApiUrl = process.env.NODE_ENV === "production" ? "https://romullearnin.ru.com/api/" : "http://localhost:3000/api/";
 export const mainApi = new API({
     baseUrl: ApiUrl
 });
