@@ -69,9 +69,9 @@ window.onload = () => {
                     if (artNumber > 3) {
                         document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
                     }
-                    else {
-                        document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
-                    }
+                    // else {
+                    //     document.getElementById('Keywords').textContent = 'По ключевым словам: ' + sortedKeywords[0] + ', ' + sortedKeywords[1] + ' и ' + (sortedKeywords.length - 2) + '-м другим';
+                    // }
                 })
 
         });
