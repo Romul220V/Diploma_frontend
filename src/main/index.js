@@ -116,11 +116,11 @@ regDone.onclick = (e) => {
 
 // For testing purposes
 
-  const regDoneTest = document.querySelector('.aboutAuthor__photo');
+//   const regDoneTest = document.querySelector('.aboutAuthor__photo');
 
-  regDoneTest.onclick = () => {
-      popupRegDone.openClose();
-  };
+//   regDoneTest.onclick = () => {
+//       popupRegDone.openClose();
+//   };
  const popupRegisterSucsess = document.querySelector('.popup_registered');
  const entryRedirect = popupRegisterSucsess.querySelector('.popup__another-choice_link');
 
